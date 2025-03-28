@@ -17,7 +17,7 @@ const PartnershipSection2 = () => {
       
       <div className="max-container">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <ScrollReveal animation="slide-up">
+          <ScrollReveal animation="slide-left">
             <div className="space-y-6">
               <SectionHeading 
                 align="left" 
