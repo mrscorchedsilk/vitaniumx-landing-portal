@@ -5,6 +5,7 @@ import CertificationIcon from '@/components/CertificationIcon';
 import ProcessStep from '@/components/ProcessStep';
 import ProductCard from '@/components/ProductCard';
 import ScrollReveal from '@/components/ScrollReveal';
+import TrustedPartnersSection from '@/components/TrustedPartnersSection';
 import { Button } from '@/components/ui/button';
 import { Mail, Phone, MapPin, Calendar, Check, Star, Award, Globe, Shield, Info, PhoneCall, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -300,22 +301,8 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Partners Section */}
-      <section className="py-16 bg-abstract-light">
-        <div className="max-container">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl font-semibold">Reputable Food Producers We Work With</h2>
-          </div>
-
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="h-16 w-24 glass flex items-center justify-center rounded-lg p-4">
-                <div className="text-gray-400 text-sm font-medium">Client {i}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Partners Section - Replaced with our new TrustedPartnersSection */}
+      <TrustedPartnersSection />
 
       {/* Why Choose Us Section */}
       <section className="section-padding bg-abstract">
