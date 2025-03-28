@@ -38,18 +38,6 @@ const CertificationIcon = ({
         duration: 0.5, 
         delay: delay / 1000,
       }}
-      // Add floating animation
-      animate={{
-        y: [0, -10, 0],
-        opacity: 1,
-        scale: 1,
-      }}
-      transition={{
-        duration: 4,
-        delay: delay / 1000,
-        repeat: Infinity,
-        repeatType: "reverse",
-      }}
     >
       <img 
         src={imageSrc} 
