@@ -45,15 +45,9 @@ const TrustedPartnersSection = () => {
   ];
 
   return (
-    <section className="py-16 relative overflow-hidden">
-      {/* Semi-transparent background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-emerald-50/30 to-blue-50/30 backdrop-blur-sm z-0"></div>
-      
-      {/* Optional decorative elements */}
-      <div className="absolute inset-0 overflow-hidden opacity-10 z-0">
-        <div className="absolute -right-32 -bottom-32 w-96 h-96 rounded-full bg-blue-300/30"></div>
-        <div className="absolute -left-24 -top-24 w-80 h-80 rounded-full bg-amber-200/30"></div>
-      </div>
+    <section className="py-16 relative overflow-hidden bg-transparent">
+      {/* Semi-transparent overlay for better readability */}
+      <div className="absolute inset-0 bg-white/20 backdrop-blur-sm z-0"></div>
       
       <div className="max-container relative z-10">
         <motion.div 

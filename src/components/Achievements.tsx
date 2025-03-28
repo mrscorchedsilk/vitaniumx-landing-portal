@@ -4,8 +4,9 @@ import StatCard from '@/components/StatCard';
 
 const Achievements = () => {
   return (
-    <section className="section-padding bg-gradient-to-r from-vitablue to-blue-600 text-white">
-      <div className="max-container">
+    <section className="section-padding bg-transparent text-white relative">
+      <div className="absolute inset-0 bg-gradient-to-r from-vitablue/70 to-blue-600/70 backdrop-blur-sm"></div>
+      <div className="max-container relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Achievements & Impact
         </h2>

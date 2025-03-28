@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 const CallToAction = () => {
   return (
-    <section className="section-padding bg-abstract">
+    <section className="section-padding bg-transparent">
       <div className="max-container">
         <div className="glass-card max-w-4xl mx-auto text-center p-8 md:p-12">
           <h2 className="text-3xl font-bold">

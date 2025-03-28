@@ -5,7 +5,7 @@ import { Star, Award, Shield, Globe, Info, Check } from 'lucide-react';
 
 const ProductsSection = () => {
   return (
-    <section className="section-padding bg-abstract-light">
+    <section className="section-padding bg-transparent">
       <div className="max-container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">

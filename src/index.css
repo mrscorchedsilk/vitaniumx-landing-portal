@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -65,7 +64,7 @@
   }
   body {
     @apply bg-background text-foreground antialiased;
-    background-image: url('/lovable-uploads/23001428-1974-47b9-b04a-8249925b72d2.png');
+    background-image: url('/lovable-uploads/e4ba6480-d5b9-4225-95bc-36c764caf4d7.png');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -74,7 +73,7 @@
 
 @layer components {
   .glass {
-    @apply backdrop-blur-xl bg-white/50 border border-white/20 shadow-lg;
+    @apply backdrop-blur-xl bg-white/40 border border-white/20 shadow-lg;
   }
   
   .glass-card {
@@ -117,43 +116,34 @@
     @apply text-sm text-gray-600;
   }
   
-  /* Abstract background patterns */
+  /* Abstract background patterns - make them transparent */
   .bg-abstract {
-    background-color: rgba(240, 244, 248, 0.7);
-    background-image: 
-      radial-gradient(circle at 25% 25%, rgba(29, 161, 242, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, rgba(29, 161, 242, 0.05) 0%, transparent 50%),
-      linear-gradient(135deg, rgba(126, 213, 255, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+    background-color: rgba(255, 255, 255, 0);
   }
   
   .bg-abstract-light {
-    background-color: rgba(248, 250, 252, 0.7);
-    background-image: 
-      radial-gradient(circle at 10% 20%, rgba(29, 161, 242, 0.04) 0%, transparent 30%),
-      radial-gradient(circle at 90% 30%, rgba(126, 213, 255, 0.03) 0%, transparent 40%),
-      radial-gradient(circle at 50% 80%, rgba(29, 161, 242, 0.03) 0%, transparent 35%),
-      linear-gradient(135deg, rgba(126, 213, 255, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
+    background-color: rgba(255, 255, 255, 0);
   }
   
   .bg-dots {
     background-image: radial-gradient(#1EAEDB 1px, transparent 1px);
     background-size: 20px 20px;
-    background-color: rgba(248, 250, 252, 0.5);
+    background-color: rgba(248, 250, 252, 0.3);
     background-position: 0 0, 10px 10px;
     background-blend-mode: multiply;
     opacity: 0.3;
   }
   
-  /* Marble background */
+  /* Updated marble background */
   .bg-marble {
-    background-image: url('/lovable-uploads/23001428-1974-47b9-b04a-8249925b72d2.png');
+    background-image: url('/lovable-uploads/e4ba6480-d5b9-4225-95bc-36c764caf4d7.png');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
   }
   
-  /* Content overlay for better readability on the marble background */
+  /* Content overlay for better readability */
   .content-overlay {
-    @apply bg-white/80 backdrop-blur-sm rounded-xl shadow-lg;
+    @apply bg-white/40 backdrop-blur-sm rounded-xl shadow-lg;
   }
 }
