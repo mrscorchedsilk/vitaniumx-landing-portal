@@ -7,6 +7,7 @@ import TrustedPartnersSection from '@/components/TrustedPartnersSection';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Achievements from '@/components/Achievements';
 import PartnershipSection from '@/components/PartnershipSection';
+import PartnershipSection2 from '@/components/PartnershipSection2';
 import ProductsSection from '@/components/ProductsSection';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
@@ -32,6 +33,9 @@ const Index = () => {
       
       {/* Partnership Section */}
       <PartnershipSection />
+      
+      {/* Second Partnership Section */}
+      <PartnershipSection2 />
 
       {/* Products Section */}
       <ProductsSection />
