@@ -3,8 +3,6 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import ScrollReveal from '@/components/ScrollReveal';
 import { PhoneIcon, MessageSquareIcon } from 'lucide-react';
-import SectionHeading from './ui/SectionHeading';
-import { Card } from './ui/card';
 
 const PartnershipSection = () => {
   return (
@@ -14,14 +12,14 @@ const PartnershipSection = () => {
           <div className="relative">
             <div className="relative">
               <img 
-                src="/lovable-uploads/4dd6e4f0-ddbf-4daf-98db-b48c360e9b47.png" 
+                src="/lovable-uploads/57bb13a1-d547-4f58-9cc6-590e9225eb13.png" 
                 alt="Yellow circular background" 
                 className="w-full"
               />
               <img 
-                src="/lovable-uploads/391f5f10-5b12-4e04-b1ac-cb33e4b2d493.png" 
+                src="/lovable-uploads/ebffafc2-e9af-46d5-9ac1-837426db5e84.png" 
                 alt="Fortification products" 
-                className="absolute inset-0 w-full h-full object-contain"
+                className="absolute inset-0 w-3/4 h-3/4 m-auto object-cover rounded-full"
               />
               <div className="absolute bottom-10 left-5 bg-vitablue rounded-full p-3 shadow-lg">
                 <PhoneIcon className="text-white h-6 w-6" />
@@ -34,42 +32,40 @@ const PartnershipSection = () => {
 
           <ScrollReveal animation="slide-left">
             <div className="space-y-6">
-              <p className="text-vitablue uppercase font-bold tracking-wider">YOUR FORTIFICATION PARTNER</p>
+              <p className="text-vitablue uppercase font-bold tracking-wider">SCALE YOUR FORTIFIED PRODUCT LINE WITH CONFIDENCE</p>
               
               <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-                Your End-to-End Fortification Partner
+                As a manufacturer, you need a fortification partner who understands your challenges
               </h2>
               
-              <p className="text-gray-600 mt-2">We specialize in:</p>
-              
-              <ul className="space-y-4 mt-4">
+              <ul className="space-y-4 mt-8">
                 <li className="flex items-start gap-2">
                   <span className="text-gray-500">•</span>
-                  <span className="text-gray-600">Custom premix development for specific food applications</span>
+                  <span className="text-gray-600">Consistent quality that meets your specifications</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-gray-500">•</span>
-                  <span className="text-gray-600">In-house stability testing and quality control</span>
+                  <span className="text-gray-600">Technical support for seamless integration</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-gray-500">•</span>
-                  <span className="text-gray-600">Technical documentation for regulatory compliance</span>
+                  <span className="text-gray-600">Reliable supply chain for uninterrupted production</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-gray-500">•</span>
-                  <span className="text-gray-600">Process optimisation support</span>
+                  <span className="text-gray-600">Competitive pricing to maintain margins</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-gray-500">•</span>
-                  <span className="text-gray-600">Flexible batch sizes to match your production needs</span>
+                  <span className="text-gray-600">Regulatory compliance documentation</span>
                 </li>
               </ul>
               
               <p className="text-gray-600 mt-4">
-                Join leading food manufacturers who trust us for their fortification requirements. Schedule a consultation to discuss your specific needs
+                Our modern manufacturing facility delivers premixes that work perfectly in your production process. Let's discuss your specific requirements.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <div className="flex flex-col md:flex-row gap-4 mt-8">
                 <Button className="bg-vitablue hover:bg-blue-600 text-white">
                   REQUEST FOR CALL BACK
                 </Button>
