@@ -28,15 +28,20 @@ const CertificationIcon = ({
   return (
     <motion.div 
       className={cn(
-        "inline-flex items-center justify-center glass rounded-full p-1 shadow-lg transition-all hover:scale-110", 
+        "inline-flex items-center justify-center glass rounded-full p-1 shadow-lg", 
         sizeClasses[size],
         className
       )}
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ 
-        duration: 0.5, 
-        delay: delay / 1000,
+      initial={{ y: 0 }}
+      animate={{ 
+        y: [0, -10, 0],
+        transition: {
+          duration: 4,
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "easeInOut",
+          delay: delay / 1000
+        }
       }}
     >
       <img 

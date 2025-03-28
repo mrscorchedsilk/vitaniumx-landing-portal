@@ -17,12 +17,12 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-50 to-blue-100">
+    <div className="min-h-screen bg-abstract">
       {/* Hero Section */}
       <header className="relative overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-gradient-radial from-vitablue-light/10 to-transparent"></div>
+        <div className="absolute inset-0 z-0 bg-dots"></div>
         
-        <div className="max-container py-16 flex flex-col items-center">
+        <div className="max-container py-16 flex flex-col items-center relative z-10">
           <Logo />
           
           <motion.div 
@@ -73,53 +73,43 @@ const Index = () => {
             </motion.div>
 
             {/* Updated Certification Icons Section */}
-            <motion.div 
-              className="flex justify-center flex-wrap gap-4 pt-8"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
+            <div className="flex justify-center flex-wrap gap-4 pt-8">
               <CertificationIcon 
                 imageSrc="/lovable-uploads/34d83cd1-d9cc-4729-b5a2-36d3a619208d.png" 
                 alt="FSSAI Certification"
-                delay={0}
                 size="lg"
               />
               <CertificationIcon 
                 imageSrc="/lovable-uploads/44926a1d-a315-4b53-82ff-577da7418750.png" 
                 alt="FSSC 22000 Certification"
-                delay={200}
                 size="lg"
               />
               <CertificationIcon 
                 imageSrc="/lovable-uploads/9030ba6e-41af-4847-a715-7b2c001610f8.png" 
                 alt="GMP Certification"
-                delay={400}
                 size="lg"
               />
               <CertificationIcon 
                 imageSrc="/lovable-uploads/0fd9b7b7-e731-4f37-b7fe-a5cc7210aae8.png" 
                 alt="ISO 9001:2015 Certification"
-                delay={600}
                 size="lg"
               />
               <CertificationIcon 
                 imageSrc="/lovable-uploads/632ea02c-911f-466f-a4a7-22833cfc2c82.png" 
                 alt="ISO 22000:2018 Certification"
-                delay={800}
                 size="lg"
               />
-            </motion.div>
+            </div>
           </motion.div>
         </div>
         
         {/* New Form Section */}
         <div className="pt-24 pb-20">
-          <div className="container-wide max-container">
+          <div className="container-wide">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12">
                 <ScrollReveal>
-                  <h1 className="heading-lg text-3xl font-bold mb-4">Request a Quote</h1>
+                  <h1 className="heading-lg mb-4 text-3xl font-bold">Request a Quote</h1>
                 </ScrollReveal>
                 <ScrollReveal delay={100}>
                   <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
@@ -311,7 +301,7 @@ const Index = () => {
       </header>
 
       {/* Partners Section */}
-      <section className="py-16 bg-white/50">
+      <section className="py-16 bg-abstract-light">
         <div className="max-container">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-semibold">Reputable Food Producers We Work With</h2>
@@ -328,7 +318,7 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="section-padding">
+      <section className="section-padding bg-abstract">
         <div className="max-container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -416,7 +406,7 @@ const Index = () => {
       </section>
 
       {/* Products Section */}
-      <section className="section-padding">
+      <section className="section-padding bg-abstract-light">
         <div className="max-container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">
@@ -469,7 +459,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-radial from-vitablue/10 to-transparent">
+      <section className="section-padding bg-abstract">
         <div className="max-container">
           <div className="glass-card max-w-4xl mx-auto text-center p-8 md:p-12">
             <h2 className="text-3xl font-bold">
