@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Logo from '@/components/Logo';
+import FooterLogo from '@/components/FooterLogo';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="max-container">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <Logo />
+            <FooterLogo />
             <p className="mt-4 text-gray-400">
               Progressive Processors Private Limited
             </p>
