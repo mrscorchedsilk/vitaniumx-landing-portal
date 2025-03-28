@@ -46,6 +46,11 @@ const TrustedPartnersSection = () => {
 
   return (
     <section className="py-16 relative overflow-hidden bg-transparent">
+      {/* Animated background glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-vitagray/30 rounded-full filter blur-[80px] animate-pulse"></div>
+      </div>
+      
       {/* Semi-transparent overlay for better readability */}
       <div className="absolute inset-0 bg-white/20 backdrop-blur-sm z-0"></div>
       
@@ -72,6 +77,32 @@ const TrustedPartnersSection = () => {
         >
           <PartnersCarousel logos={partnerLogos} />
         </motion.div>
+        
+        {/* Floating particles or dots */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(8)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute rounded-full bg-vitablue/20"
+              style={{
+                width: Math.random() * 15 + 5,
+                height: Math.random() * 15 + 5,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -20, 0],
+                opacity: [0.2, 0.4, 0.2],
+              }}
+              transition={{
+                duration: Math.random() * 3 + 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: Math.random() * 5,
+              }}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
