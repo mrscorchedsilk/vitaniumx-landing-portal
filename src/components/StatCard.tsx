@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface StatCardProps {
   number: string;
@@ -9,13 +10,15 @@ interface StatCardProps {
 
 const StatCard = ({ number, text, delay = 0 }: StatCardProps) => {
   return (
-    <div 
-      className="stat-card animate-fade-in" 
-      style={{ animationDelay: `${delay}ms` }}
+    <motion.div 
+      className="stat-card"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: delay / 1000 }}
     >
       <div className="stat-number">{number}</div>
       <div className="stat-text">{text}</div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -7,7 +7,8 @@ import CertificationIcon from '@/components/CertificationIcon';
 import ProcessStep from '@/components/ProcessStep';
 import ProductCard from '@/components/ProductCard';
 import { Button } from '@/components/ui/button';
-import { Mail, Phone, MapPin, Calendar, Check, Star, Award, Globe, Shield, Info } from 'lucide-react';
+import { Mail, Phone, MapPin, Calendar, Check, Star, Award, Globe, Shield, Info, PhoneCall, Whatsapp } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Index = () => {
   return (
@@ -16,13 +17,16 @@ const Index = () => {
       <header className="relative overflow-hidden">
         <div className="absolute inset-0 z-0 bg-gradient-radial from-vitablue-light/10 to-transparent"></div>
         
-        <div className="max-container py-8">
+        <div className="max-container py-16 flex flex-col items-center">
           <Logo />
-        </div>
-        
-        <div className="max-container min-h-[calc(100vh-8rem)] grid md:grid-cols-2 gap-10 items-center py-10 md:py-20">
-          <div className="space-y-6">
-            <div className="inline-block glass rounded-full px-4 py-1 text-sm font-medium text-vitablue">
+          
+          <motion.div 
+            className="mt-8 space-y-6 text-center max-w-3xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div className="inline-block glass rounded-full px-4 py-1 text-sm font-medium text-vitablue mx-auto">
               India's Premier Micronutrient Partner
             </div>
             
@@ -35,27 +39,36 @@ const Index = () => {
               At VitaniumX, we're dedicated to combating hidden hunger and malnutrition with scientifically crafted, high-quality micronutrient premixes tailored to fortify staple foods.
             </p>
 
-            <div className="pt-4 flex flex-wrap gap-4">
-              <Button className="btn-primary">
-                Request a Quote
+            <motion.div 
+              className="pt-6 flex flex-col sm:flex-row justify-center gap-4"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <Button className="btn-primary" size="lg">
+                <PhoneCall className="mr-2" />
+                Get a Call
               </Button>
-              <Button variant="outline">
-                Our Products
+              <Button variant="outline" size="lg" className="bg-green-500 hover:bg-green-600 text-white border-green-600">
+                <Whatsapp className="mr-2" />
+                Connect on WhatsApp
               </Button>
-            </div>
+            </motion.div>
 
-            <div className="flex gap-4 pt-2">
+            <div className="flex justify-center gap-4 pt-4">
               {['GMP', 'ISO', 'FSSC', 'FSSAI'].map((cert, i) => (
                 <CertificationIcon 
                   key={cert} 
                   name={cert}
-                  className={`animate-fade-in`}
-                  style={{ animationDelay: `${i * 200}ms` }}
+                  delay={i * 200}
                 />
               ))}
             </div>
-          </div>
-
+          </motion.div>
+        </div>
+        
+        <div className="max-container grid md:grid-cols-2 gap-10 items-center py-10 md:py-20">
+          <div></div>
           <div>
             <ContactForm />
           </div>
