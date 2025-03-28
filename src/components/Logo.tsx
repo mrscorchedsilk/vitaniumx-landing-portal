@@ -13,7 +13,7 @@ const Logo = () => {
       <img 
         src="/lovable-uploads/23a708c5-b3da-4d93-b63c-4ee5465679da.png" 
         alt="VitaniumX Logo"
-        className="h-16 md:h-24"
+        className="h-24 md:h-32" // Increased size from h-16/h-24 to h-24/h-32
       />
     </motion.div>
   );

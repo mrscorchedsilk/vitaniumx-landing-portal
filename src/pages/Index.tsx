@@ -67,15 +67,44 @@ const Index = () => {
               </Button>
             </motion.div>
 
-            <div className="flex justify-center gap-4 pt-4">
-              {['GMP', 'ISO', 'FSSC', 'FSSAI'].map((cert, i) => (
-                <CertificationIcon 
-                  key={cert} 
-                  name={cert}
-                  delay={i * 200}
-                />
-              ))}
-            </div>
+            {/* Updated Certification Icons Section */}
+            <motion.div 
+              className="flex justify-center flex-wrap gap-4 pt-8"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              <CertificationIcon 
+                imageSrc="/lovable-uploads/34d83cd1-d9cc-4729-b5a2-36d3a619208d.png" 
+                alt="FSSAI Certification"
+                delay={0}
+                size="lg"
+              />
+              <CertificationIcon 
+                imageSrc="/lovable-uploads/44926a1d-a315-4b53-82ff-577da7418750.png" 
+                alt="FSSC 22000 Certification"
+                delay={200}
+                size="lg"
+              />
+              <CertificationIcon 
+                imageSrc="/lovable-uploads/9030ba6e-41af-4847-a715-7b2c001610f8.png" 
+                alt="GMP Certification"
+                delay={400}
+                size="lg"
+              />
+              <CertificationIcon 
+                imageSrc="/lovable-uploads/0fd9b7b7-e731-4f37-b7fe-a5cc7210aae8.png" 
+                alt="ISO 9001:2015 Certification"
+                delay={600}
+                size="lg"
+              />
+              <CertificationIcon 
+                imageSrc="/lovable-uploads/632ea02c-911f-466f-a4a7-22833cfc2c82.png" 
+                alt="ISO 22000:2018 Certification"
+                delay={800}
+                size="lg"
+              />
+            </motion.div>
           </motion.div>
         </div>
         
