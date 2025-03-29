@@ -1,13 +1,51 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import ScrollReveal from '@/components/ScrollReveal';
 import { CheckCircle } from 'lucide-react';
+import { toast } from 'sonner';
 
 const QuoteForm = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    company: '',
+    productInterest: '',
+    volume: '',
+    message: '',
+    consent: false
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+    
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+  };
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Handle form submission here
-    console.log('Form submitted');
+    console.log('Form submitted', formData);
+    
+    toast.success('Your quote request has been submitted!');
+    
+    // Reset form after submission
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      company: '',
+      productInterest: '',
+      volume: '',
+      message: '',
+      consent: false
+    });
   };
 
   return (
@@ -38,8 +76,11 @@ const QuoteForm = () => {
                         <input
                           type="text"
                           id="firstName"
+                          name="firstName"
+                          value={formData.firstName}
+                          onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent"
+                          className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent transition-all duration-300 hover:border-vitablue focus:glow-vitablue"
                         />
                       </div>
                       <div>
@@ -49,8 +90,11 @@ const QuoteForm = () => {
                         <input
                           type="text"
                           id="lastName"
+                          name="lastName"
+                          value={formData.lastName}
+                          onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent"
+                          className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent transition-all duration-300 hover:border-vitablue focus:glow-vitablue"
                         />
                       </div>
                     </div>
@@ -63,8 +107,11 @@ const QuoteForm = () => {
                         <input
                           type="email"
                           id="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent"
+                          className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent transition-all duration-300 hover:border-vitablue focus:glow-vitablue"
                         />
                       </div>
                       <div>
@@ -74,8 +121,11 @@ const QuoteForm = () => {
                         <input
                           type="tel"
                           id="phone"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent"
+                          className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent transition-all duration-300 hover:border-vitablue focus:glow-vitablue"
                         />
                       </div>
                     </div>
@@ -87,8 +137,11 @@ const QuoteForm = () => {
                       <input
                         type="text"
                         id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent"
+                        className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent transition-all duration-300 hover:border-vitablue focus:glow-vitablue"
                       />
                     </div>
 
@@ -98,12 +151,15 @@ const QuoteForm = () => {
                       </label>
                       <select
                         id="productInterest"
+                        name="productInterest"
+                        value={formData.productInterest}
+                        onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent"
+                        className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent transition-all duration-300 hover:border-vitablue focus:glow-vitablue"
                       >
                         <option value="">Select a product category</option>
-                        <option value="staple">Staple Food Fortification</option>
-                        <option value="processed">Processed Food Solutions</option>
+                        <option value="staple">Micronutrient Premixes</option>
+                        <option value="processed">Government Nutritional Schemes</option>
                         <option value="therapeutic">Therapeutic Foods</option>
                         <option value="animal">Animal Nutrition</option>
                         <option value="custom">Customized Formulations</option>
@@ -118,7 +174,10 @@ const QuoteForm = () => {
                       <input
                         type="text"
                         id="volume"
-                        className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent"
+                        name="volume"
+                        value={formData.volume}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent transition-all duration-300 hover:border-vitablue focus:glow-vitablue"
                       />
                     </div>
 
@@ -128,9 +187,12 @@ const QuoteForm = () => {
                       </label>
                       <textarea
                         id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
                         rows={5}
                         required
-                        className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent"
+                        className="w-full px-4 py-3 rounded-md border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-vitablue focus:border-transparent transition-all duration-300 hover:border-vitablue focus:glow-vitablue"
                         placeholder="Please describe your specific requirements, including the type of food you want to fortify, target nutrients, etc."
                       ></textarea>
                     </div>
@@ -139,8 +201,11 @@ const QuoteForm = () => {
                       <label className="flex items-start">
                         <input
                           type="checkbox"
+                          name="consent"
+                          checked={formData.consent}
+                          onChange={handleChange}
                           required
-                          className="mt-1 mr-3"
+                          className="mt-1 mr-3 focus:ring-2 focus:ring-vitablue"
                         />
                         <span className="text-sm text-neutral-600">
                           I consent to VitaniumX collecting and processing my personal data for the purpose of providing me with a quote. 
@@ -151,7 +216,7 @@ const QuoteForm = () => {
 
                     <button
                       type="submit"
-                      className="btn-primary bg-vitablue hover:bg-vitablue-dark w-full py-4"
+                      className="btn-primary bg-vitablue hover:bg-vitablue-dark w-full py-4 hover-pop glow-vitablue"
                     >
                       Submit Quote Request
                     </button>
