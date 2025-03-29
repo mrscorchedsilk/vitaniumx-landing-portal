@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Logo from '@/components/Logo';
 import CertificationIcon from '@/components/CertificationIcon';
@@ -8,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <div className="max-container py-16 flex flex-col items-center relative z-10">
+    <div className="max-container py-5 flex flex-col items-center relative z-10">
       <Logo />
       
       <motion.div 
@@ -17,13 +16,14 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="inline-block glass rounded-full px-4 py-1 text-sm font-medium text-vitablue mx-auto">
+        <div className="inline-block glass rounded-full px-5 py-1.5 text-base font-bold text-gradient mx-auto shadow-[0_0_10px_rgba(0,100,255,0.5)]">
           India's Premier Micronutrient Partner
         </div>
         
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
           Micronutrient Premixes<br />
-          <span className="text-gradient">That Meet Your Production Standards</span>
+          <span className="text-gradient">That Meet Your Production </span>
+          <span className="text-gradient">Standards</span>
         </h1>
         
         <p className="text-lg text-gray-600">
@@ -31,27 +31,32 @@ const Hero = () => {
         </p>
 
         <motion.div 
-          className="pt-6 flex flex-col sm:flex-row justify-center gap-4"
+          className="pt-6 flex flex-col justify-center gap-4"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <Button className="btn-primary" size="lg">
-            <PhoneCall className="mr-2" />
+          <Button 
+            className="w-full max-w-md mx-auto text-lg font-bold bg-[#3AB7FA] hover:bg-[#2a9de6] text-white shadow-[0_0_15px_rgba(58,183,250,0.5)]" 
+            size="lg">
+            <PhoneCall className="mr-2 h-5 w-5" />
             Get a Call
           </Button>
-          <Button variant="outline" size="lg" className="bg-green-500 hover:bg-green-600 text-white border-green-600">
+          <Button 
+            className="w-full max-w-md mx-auto text-lg font-bold bg-green-500 hover:bg-green-600 text-white shadow-[0_0_15px_rgba(37,211,102,0.5)]"
+            size="lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="mr-2 h-5 w-5"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="currentColor"
+              className="mr-2 h-5 w-5"
             >
               <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
-              />
-              <path
-                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22c-5.523 0-10-4.477-10-10S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M20.463 3.488C18.217 1.24 15.231 0 12.05 0 5.495 0 0.16 5.334 0.157 11.892c0 2.096.546 4.142 1.588 5.946L0 24l6.304-1.654a11.9 11.9 0 005.684 1.448h.005c6.554 0 11.89-5.335 11.894-11.893 0-3.18-1.24-6.165-3.493-8.413zm-8.413 18.317h-.004a9.89 9.89 0 01-5.042-1.38l-.36-.214-3.733.979.996-3.648-.236-.375a9.859 9.859 0 01-1.51-5.276c.002-5.45 4.437-9.884 9.893-9.884 2.641 0 5.124 1.03 6.991 2.898a9.84 9.84 0 012.898 6.994c-.003 5.45-4.437 9.886-9.893 9.886zm5.424-7.403c-.299-.149-1.765-.87-2.037-.967-.272-.099-.47-.148-.669.148-.198.298-.767.967-.94 1.164-.173.198-.345.223-.644.075-.299-.15-1.261-.465-2.402-1.483-.888-.792-1.487-1.77-1.66-2.069-.173-.298-.019-.458.13-.606.134-.133.297-.347.446-.52.148-.174.197-.298.297-.497.1-.199.05-.372-.025-.522-.075-.149-.67-1.612-.917-2.207-.241-.578-.487-.5-.67-.51-.172-.01-.37-.012-.569-.012-.198 0-.52.075-.793.373s-1.04 1.016-1.04 2.479c0 1.462 1.064 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.489.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.57-.085 1.758-.719 2.006-1.413.247-.695.247-1.29.173-1.414-.074-.124-.273-.198-.572-.347z"
               />
             </svg>
             Connect on WhatsApp

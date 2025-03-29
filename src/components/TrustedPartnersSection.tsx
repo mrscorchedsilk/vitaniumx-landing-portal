@@ -56,7 +56,7 @@ const TrustedPartnersSection = () => {
       
       <div className="max-container relative z-10">
         <motion.div 
-          className="text-center mb-12 glow-white p-6 rounded-xl"
+          className="text-center mb-12 glow-white rounded-xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -79,7 +79,7 @@ const TrustedPartnersSection = () => {
         </motion.div>
         
         {/* Floating particles or dots */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(8)].map((_, i) => (
             <motion.div
               key={i}
@@ -102,7 +102,7 @@ const TrustedPartnersSection = () => {
               }}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

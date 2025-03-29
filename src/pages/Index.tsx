@@ -16,11 +16,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-abstract">
       {/* Header with Hero Section */}
-      <PageHeader>
-        <Hero />
+      <Hero />
         {/* Form Section */}
-        <QuoteForm />
-      </PageHeader>
+      <QuoteForm />
 
       {/* Partners Section */}
       <TrustedPartnersSection />

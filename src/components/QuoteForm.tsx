@@ -52,7 +52,7 @@ const QuoteForm = () => {
   };
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-20 pb-15">
       <div className="container-wide">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
@@ -69,7 +69,7 @@ const QuoteForm = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
               <ScrollReveal>
-                <div className="bg-white p-8 rounded-xl shadow-subtle border border-neutral-100">
+                <div className="bg-white p-8 rounded-xl shadow-subtle border border-neutral-100 shadow-[0_0_15px_rgba(58,183,250,0.3)] hover:shadow-[0_0_20px_rgba(58,183,250,0.5)] transition-all duration-300">
                   <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                       <div>
