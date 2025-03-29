@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ProductCard from '@/components/ProductCard';
-import { Star, Award, Shield, Globe, Info, Check } from 'lucide-react';
+import { Wheat, Heart, Shield, Globe, Info, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const ProductsSection = () => {
@@ -37,40 +37,52 @@ const ProductsSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ProductCard 
-            title="Staple Food Premixes"
+            title="Micronutrient Premixes"
             description="Fortification solutions for wheat flour, rice (including Fortified Rice Kernels), milk, and oil."
-            icon={<Star className="text-vitablue h-8 w-8" />}
+            icon={<Wheat className="text-vitablue h-8 w-8" />}
             delay={200}
+            bgColor="bg-[#F2FCE2]"
+            className="glow-green hover-pop"
           />
           <ProductCard 
-            title="Processed Food Fortification"
-            description="Custom blends for snacks, bakery, confectionery, dairy, and beverages."
-            icon={<Award className="text-vitablue h-8 w-8" />}
+            title="Government Nutritional Schemes"
+            description="Custom blends for government schemes targeting health and nutrition needs across populations."
+            icon={<Heart className="text-vitablue h-8 w-8" />}
             delay={400}
+            bgColor="bg-[#FFDEE2]"
+            className="glow-vitablue hover-pop"
           />
           <ProductCard 
             title="Therapeutic Foods"
             description="Specialized, nutrient-dense formulations for acute malnutrition (WFP standards)."
             icon={<Shield className="text-vitablue h-8 w-8" />}
             delay={600}
+            bgColor="bg-[#D3E4FD]"
+            className="glow-multi hover-pop"
           />
           <ProductCard 
             title="Customized Formulations"
             description="Tailored blends for diverse industry applications based on your specific requirements."
             icon={<Globe className="text-vitablue h-8 w-8" />}
             delay={800}
+            bgColor="bg-[#FDE1D3]"
+            className="glow-vitablue hover-pop"
           />
           <ProductCard 
             title="Animal Nutrition"
             description="Vitamin and mineral premixes for livestock, poultry, and aquaculture feed."
             icon={<Info className="text-vitablue h-8 w-8" />}
             delay={1000}
+            bgColor="bg-[#E5DEFF]"
+            className="glow-multi hover-pop"
           />
           <ProductCard 
             title="FMCG Fortification"
             description="Solutions for breads, biscuits, breakfast cereals, fruit juices, and more."
             icon={<Check className="text-vitablue h-8 w-8" />}
             delay={1200}
+            bgColor="bg-[#FEF7CD]"
+            className="glow-green hover-pop"
           />
         </div>
         

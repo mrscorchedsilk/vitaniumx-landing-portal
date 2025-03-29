@@ -1,18 +1,32 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 interface ProductCardProps {
   title: string;
   description: string;
   icon?: React.ReactNode;
   delay?: number;
+  bgColor?: string;
+  className?: string;
 }
 
-const ProductCard = ({ title, description, icon, delay = 0 }: ProductCardProps) => {
+const ProductCard = ({ 
+  title, 
+  description, 
+  icon, 
+  delay = 0, 
+  bgColor,
+  className 
+}: ProductCardProps) => {
   return (
     <div 
-      className="glass-card h-full flex flex-col animate-fade-in" 
+      className={cn(
+        "glass-card h-full flex flex-col animate-fade-in", 
+        bgColor,
+        className
+      )}
       style={{ animationDelay: `${delay}ms` }}
     >
       {icon && <div className="mb-4">{icon}</div>}
