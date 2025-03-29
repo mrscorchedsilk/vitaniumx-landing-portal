@@ -66,6 +66,12 @@ const Hero = () => {
         {/* Certification Icons Section */}
         <div className="flex justify-center flex-wrap gap-4 pt-8">
           
+        <CertificationIcon 
+            imageSrc="/lovable-uploads/0fd9b7b7-e731-4f37-b7fe-a5cc7210aae8.png" 
+            alt="ISO 9001:2015 Certification"
+            size="lg"
+          />
+          
           <CertificationIcon 
             imageSrc="/lovable-uploads/fssc_22000-logo.png" 
             alt="FSSC 22000 Certification"
@@ -81,11 +87,7 @@ const Hero = () => {
             alt="FSSAI Certification"
             size="lg"
           />
-          <CertificationIcon 
-            imageSrc="/lovable-uploads/0fd9b7b7-e731-4f37-b7fe-a5cc7210aae8.png" 
-            alt="ISO 9001:2015 Certification"
-            size="lg"
-          />
+          
           <CertificationIcon 
             imageSrc="/lovable-uploads/iso-22000-2018-certification-service-500x500.webp" 
             alt="ISO 22000:2018 Certification"
