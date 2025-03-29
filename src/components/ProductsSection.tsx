@@ -22,7 +22,7 @@ const ProductsSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold">
-            Our <span className="text-gradient">Products</span>
+             <span className="text-gradient">Our Products</span>
           </h2>
           <motion.p 
             className="mt-4 text-gray-600 max-w-2xl mx-auto"

@@ -19,15 +19,19 @@ const PartnershipSection2 = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <ScrollReveal animation="slide-left">
             <div className="space-y-6 glow-white p-8 rounded-xl hover-pop">
-              <SectionHeading 
-                align="left" 
-                title="Your End-to-End Fortification Partner" 
-                titleSize="md"
-              />
+              <motion.h2 
+                className="text-3xl md:text-4xl font-bold leading-tight"
+                initial={{ opacity: 0, y: -10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                Your End-to-End Fortification Partner
+              </motion.h2>
               
-              <p className="text-gray-600 mt-2">We specialize in:</p>
+              <p className="text-gray-600 mt-2 font-bold">We specialize in:</p>
               
-              <ul className="space-y-4 mt-4">
+              <ul className="space-y-4 mt-4 font-bold">
                 {[
                   "Custom premix development for specific food applications",
                   "In-house stability testing and quality control",
@@ -49,7 +53,7 @@ const PartnershipSection2 = () => {
                 ))}
               </ul>
               
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-600 mt-4 font-bold">
                 Join leading food manufacturers who trust us for their fortification requirements. Schedule a consultation to discuss your specific needs.
               </p>
               
@@ -90,26 +94,6 @@ const PartnershipSection2 = () => {
                 animate={{ y: [0, -8, 0] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
               />
-              <motion.div 
-                className="absolute bottom-10 right-10 bg-vitablue rounded-full p-3 shadow-lg glow-vitablue"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.1 }}
-              >
-                <CalendarIcon className="text-white h-6 w-6" />
-              </motion.div>
-              <motion.div 
-                className="absolute top-20 right-10 bg-green-500 rounded-full p-3 shadow-lg glow-green"
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.1 }}
-              >
-                <FileTextIcon className="text-white h-6 w-6" />
-              </motion.div>
             </motion.div>
           </div>
         </div>

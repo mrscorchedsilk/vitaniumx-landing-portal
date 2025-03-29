@@ -38,26 +38,6 @@ const PartnershipSection = () => {
                 animate={{ y: [0, -10, 0] }}
                 transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
               />
-              <motion.div 
-                className="absolute bottom-10 left-5 bg-vitablue rounded-full p-3 shadow-lg glow-vitablue"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.1 }}
-              >
-                <PhoneIcon className="text-white h-6 w-6" />
-              </motion.div>
-              <motion.div 
-                className="absolute bottom-28 left-5 bg-green-500 rounded-full p-3 shadow-lg glow-green"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.1 }}
-              >
-                <MessageSquareIcon className="text-white h-6 w-6" />
-              </motion.div>
             </motion.div>
           </div>
 
@@ -83,7 +63,7 @@ const PartnershipSection = () => {
                 As a manufacturer, you need a fortification partner who understands your challenges
               </motion.h2>
               
-              <ul className="space-y-4 mt-8">
+              <ul className="space-y-4 mt-8 font-bold">
                 {[
                   "Consistent quality that meets your specifications",
                   "Technical support for seamless integration",
@@ -106,7 +86,7 @@ const PartnershipSection = () => {
               </ul>
               
               <motion.p 
-                className="text-gray-600 mt-4"
+                className="text-gray-600 mt-4 font-bold"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
@@ -126,24 +106,9 @@ const PartnershipSection = () => {
                   <span className="relative z-10">REQUEST FOR CALL BACK</span>
                   <span className="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                 </Button>
-                <Button variant="outline" className="border-vitablue text-vitablue hover:bg-vitablue/10 transition-colors hover-pop-sm">
-                  I have a question
-                </Button>
-                <Button variant="outline" className="border-vitablue text-vitablue hover:bg-vitablue/10 transition-colors hover-pop-sm">
-                  Get a quote
-                </Button>
+
               </motion.div>
               
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1 }}
-                viewport={{ once: true }}
-              >
-                <Button variant="outline" className="mt-4 border-green-500 text-green-500 hover:bg-green-500/10 transition-colors glow-green hover-pop-sm">
-                  Consult with a Nutritionist
-                </Button>
-              </motion.div>
             </div>
           </ScrollReveal>
         </div>

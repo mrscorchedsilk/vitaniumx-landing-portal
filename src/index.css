@@ -172,7 +172,7 @@
   }
   
   .hover-pop {
-    @apply transition-all duration-300 ease-in-out;
+    @apply transition-all duration-100 ease-in-out;
   }
   
   .hover-pop:hover {
