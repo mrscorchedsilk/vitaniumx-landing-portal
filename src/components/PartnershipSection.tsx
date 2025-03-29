@@ -18,7 +18,7 @@ const PartnershipSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <motion.div 
-              className="relative"
+              className="relative glow-multi rounded-full p-4 hover-pop"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
@@ -39,7 +39,7 @@ const PartnershipSection = () => {
                 transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
               />
               <motion.div 
-                className="absolute bottom-10 left-5 bg-vitablue rounded-full p-3 shadow-lg"
+                className="absolute bottom-10 left-5 bg-vitablue rounded-full p-3 shadow-lg glow-vitablue"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -49,7 +49,7 @@ const PartnershipSection = () => {
                 <PhoneIcon className="text-white h-6 w-6" />
               </motion.div>
               <motion.div 
-                className="absolute bottom-28 left-5 bg-green-500 rounded-full p-3 shadow-lg"
+                className="absolute bottom-28 left-5 bg-green-500 rounded-full p-3 shadow-lg glow-green"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
@@ -62,7 +62,7 @@ const PartnershipSection = () => {
           </div>
 
           <ScrollReveal animation="slide-left">
-            <div className="space-y-6">
+            <div className="space-y-6 glow-white p-8 rounded-xl hover-pop">
               <motion.p 
                 className="text-vitablue uppercase font-bold tracking-wider"
                 initial={{ opacity: 0, y: -10 }}
@@ -122,14 +122,14 @@ const PartnershipSection = () => {
                 transition={{ duration: 0.5, delay: 0.9 }}
                 viewport={{ once: true }}
               >
-                <Button className="bg-vitablue hover:bg-blue-600 text-white relative group overflow-hidden">
+                <Button className="bg-vitablue hover:bg-blue-600 text-white relative group overflow-hidden glow-vitablue hover-pop-sm">
                   <span className="relative z-10">REQUEST FOR CALL BACK</span>
                   <span className="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                 </Button>
-                <Button variant="outline" className="border-vitablue text-vitablue hover:bg-vitablue/10 transition-colors">
+                <Button variant="outline" className="border-vitablue text-vitablue hover:bg-vitablue/10 transition-colors hover-pop-sm">
                   I have a question
                 </Button>
-                <Button variant="outline" className="border-vitablue text-vitablue hover:bg-vitablue/10 transition-colors">
+                <Button variant="outline" className="border-vitablue text-vitablue hover:bg-vitablue/10 transition-colors hover-pop-sm">
                   Get a quote
                 </Button>
               </motion.div>
@@ -140,7 +140,7 @@ const PartnershipSection = () => {
                 transition={{ duration: 0.5, delay: 1 }}
                 viewport={{ once: true }}
               >
-                <Button variant="outline" className="mt-4 border-green-500 text-green-500 hover:bg-green-500/10 transition-colors">
+                <Button variant="outline" className="mt-4 border-green-500 text-green-500 hover:bg-green-500/10 transition-colors glow-green hover-pop-sm">
                   Consult with a Nutritionist
                 </Button>
               </motion.div>

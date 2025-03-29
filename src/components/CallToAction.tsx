@@ -13,7 +13,7 @@ const CallToAction = () => {
       
       <div className="max-container">
         <motion.div 
-          className="glass-card max-w-4xl mx-auto text-center p-8 md:p-12 relative overflow-hidden"
+          className="glass-card max-w-4xl mx-auto text-center p-8 md:p-12 relative overflow-hidden glow-multi hover-pop"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -50,7 +50,7 @@ const CallToAction = () => {
             transition={{ duration: 0.5, delay: 0.7 }}
             viewport={{ once: true }}
           >
-            <Button className="btn-primary relative group overflow-hidden">
+            <Button className="btn-primary relative group overflow-hidden glow-vitablue hover-pop-sm">
               <span className="relative z-10">Request a Consultation</span>
               <span className="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
             </Button>

@@ -47,7 +47,7 @@ const Achievements = () => {
       
       <div className="max-container relative z-10">
         <motion.h2 
-          className="text-3xl md:text-4xl font-bold text-center mb-12"
+          className="text-3xl md:text-4xl font-bold text-center mb-12 glow-white"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -61,21 +61,25 @@ const Achievements = () => {
             number="573M+"
             text="Fortified Meals Delivered"
             delay={200}
+            className="glow-vitablue hover-pop"
           />
           <StatCard 
             number="114,736"
             text="Tonnes of Food Fortified"
             delay={400}
+            className="glow-vitablue hover-pop"
           />
           <StatCard 
             number="10"
             text="Tonnes Daily Production"
             delay={600}
+            className="glow-vitablue hover-pop"
           />
           <StatCard 
             number="100%"
             text="Quality Assurance"
             delay={800}
+            className="glow-vitablue hover-pop"
           />
         </div>
       </div>

@@ -56,7 +56,7 @@ const TrustedPartnersSection = () => {
       
       <div className="max-container relative z-10">
         <motion.div 
-          className="text-center mb-12"
+          className="text-center mb-12 glow-white p-6 rounded-xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -73,7 +73,7 @@ const TrustedPartnersSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="px-4"
+          className="px-4 glow-multi rounded-xl p-4 hover-pop"
         >
           <PartnersCarousel logos={partnerLogos} />
         </motion.div>
