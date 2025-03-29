@@ -228,7 +228,7 @@ const QuoteForm = () => {
               </ScrollReveal>
             </div>
 
-            <div>
+            {/* <div>
               <ScrollReveal delay={200}>
                 <div className="bg-neutral-50 p-8 rounded-xl">
                   <h3 className="text-xl font-bold mb-6">Why Choose VitaniumX?</h3>
@@ -268,7 +268,7 @@ const QuoteForm = () => {
                   </div>
                 </div>
               </ScrollReveal>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

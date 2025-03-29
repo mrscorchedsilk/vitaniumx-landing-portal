@@ -65,19 +65,20 @@ const Hero = () => {
 
         {/* Certification Icons Section */}
         <div className="flex justify-center flex-wrap gap-4 pt-8">
+          
           <CertificationIcon 
-            imageSrc="/lovable-uploads/34d83cd1-d9cc-4729-b5a2-36d3a619208d.png" 
-            alt="FSSAI Certification"
-            size="lg"
-          />
-          <CertificationIcon 
-            imageSrc="/lovable-uploads/44926a1d-a315-4b53-82ff-577da7418750.png" 
+            imageSrc="/lovable-uploads/fssc_22000-logo.png" 
             alt="FSSC 22000 Certification"
             size="lg"
           />
           <CertificationIcon 
-            imageSrc="/lovable-uploads/9030ba6e-41af-4847-a715-7b2c001610f8.png" 
+            imageSrc="/lovable-uploads/gmp.png" 
             alt="GMP Certification"
+            size="lg"
+          />
+          <CertificationIcon 
+            imageSrc="/lovable-uploads/fssai.webp" 
+            alt="FSSAI Certification"
             size="lg"
           />
           <CertificationIcon 
@@ -86,7 +87,7 @@ const Hero = () => {
             size="lg"
           />
           <CertificationIcon 
-            imageSrc="/lovable-uploads/632ea02c-911f-466f-a4a7-22833cfc2c82.png" 
+            imageSrc="/lovable-uploads/iso-22000-2018-certification-service-500x500.webp" 
             alt="ISO 22000:2018 Certification"
             size="lg"
           />
