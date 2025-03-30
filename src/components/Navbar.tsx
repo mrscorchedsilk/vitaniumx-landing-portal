@@ -23,7 +23,7 @@ const Navbar = () => {
           {isMobile ? (
             <a 
               href="tel:+919876543210" 
-              className="flex items-center justify-center w-full md:w-auto bg-[#59B2F4] hover:bg-[#3AA1F0] text-white font-medium py-3 px-6 rounded-lg shadow-md"
+              className="flex items-center justify-center w-full md:w-auto bg-[#59B2F4] hover:bg-[#3AA1F0] text-white font-medium py-2 px-4 rounded-lg shadow-md"
             >
               <Phone className="mr-2 h-4 w-4" />
               Call
