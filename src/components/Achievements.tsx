@@ -2,8 +2,11 @@
 import React from 'react';
 import StatCard from '@/components/StatCard';
 import { motion } from 'framer-motion';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Achievements = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="section-padding bg-transparent text-white relative overflow-hidden">
       {/* Enhanced gradient background with subtle animation */}
@@ -21,7 +24,7 @@ const Achievements = () => {
       
       <div className="max-container relative z-10">
         <motion.h2 
-          className="text-3xl md:text-4xl font-bold text-center mb-12"
+          className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -30,17 +33,11 @@ const Achievements = () => {
           Achievements & Impact
         </motion.h2>
 
-        <div className="grid grid-cols-3 max-w-4xl mx-auto gap-6 font-bold">
+        <div className={`grid grid-cols-1 ${isMobile ? 'gap-6' : 'grid-cols-2 gap-6'} max-w-3xl mx-auto`}>
           <StatCard 
             number="573M+"
             text="Fortified Meals Delivered"
             delay={200}
-            className="glow-vitablue hover-pop"
-          />
-          <StatCard 
-            number="10"
-            text="Tonnes Daily Production"
-            delay={400}
             className="glow-vitablue hover-pop"
           />
           <StatCard 

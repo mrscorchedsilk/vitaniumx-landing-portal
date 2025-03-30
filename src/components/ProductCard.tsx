@@ -24,16 +24,16 @@ const ProductCard = ({
   return (
     <div 
       className={cn(
-        "glass-card h-full flex flex-col animate-fade-in", 
+        "glass-card h-full flex flex-col animate-fade-in p-3 md:p-6", 
         bgColor,
         className
       )}
       style={{ animationDelay: `${delay}ms` }}
     >
-      {icon && <div className="mb-4">{icon}</div>}
+      {icon && <div className="mb-3 md:mb-4">{icon}</div>}
       
       {imageSrc && (
-        <div className="w-full h-48 mb-4 overflow-hidden rounded-md">
+        <div className="w-full h-32 md:h-48 mb-3 md:mb-4 overflow-hidden rounded-md">
           <img 
             src={imageSrc} 
             alt={title} 
@@ -42,8 +42,8 @@ const ProductCard = ({
         </div>
       )}
       
-      <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
-      <p className="text-white/90 mb-4 flex-grow">{description}</p>
+      <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2 text-white">{title}</h3>
+      <p className="text-sm md:text-base text-white/90 mb-2 md:mb-4 flex-grow">{description}</p>
     </div>
   );
 };

@@ -41,7 +41,7 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="glass-form space-y-4 animate-fade-in">
-      <h3 className="text-xl font-semibold mb-4">Inquire About Micronutrient Premixes</h3>
+      <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4 text-center md:text-left">Inquire About Micronutrient Premixes</h3>
       
       <div>
         <Input

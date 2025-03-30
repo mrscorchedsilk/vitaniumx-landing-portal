@@ -53,24 +53,24 @@ const QuoteForm = () => {
   };
 
   return (
-    <div className="pt-20 pb-15">
+    <div className="pt-10 md:pt-20 pb-10 md:pb-15 px-4">
       <div className="container-wide">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <ScrollReveal>
-              <h1 className="heading-lg mb-4 text-3xl font-bold">Request a Quote</h1>
+              <h1 className="heading-lg mb-2 md:mb-4 text-2xl md:text-3xl font-bold">Request a Quote</h1>
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+              <p className="text-base md:text-xl text-neutral-600 max-w-2xl mx-auto">
                 Fill out the form below and our team will provide a tailored quotation for your micronutrient premix needs.
               </p>
             </ScrollReveal>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-10">
             <div className="lg:col-span-2">
               <ScrollReveal>
-                <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-subtle border border-neutral-100 shadow-[0_0_25px_rgba(58,183,250,0.3)] hover:shadow-[0_0_30px_rgba(58,183,250,0.5)] transition-all duration-300 relative overflow-hidden">
+                <div className="bg-white/90 backdrop-blur-sm p-4 md:p-8 rounded-xl shadow-subtle border border-neutral-100 shadow-[0_0_25px_rgba(58,183,250,0.3)] hover:shadow-[0_0_30px_rgba(58,183,250,0.5)] transition-all duration-300 relative overflow-hidden">
                   {/* Floating Certification Logos */}
                   <div className="absolute -right-10 -top-10 opacity-20 pointer-events-none">
                     <FloatingCertificationLogo 
@@ -90,7 +90,7 @@ const QuoteForm = () => {
                   </div>
                   
                   <form onSubmit={handleSubmit}>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
                       <div>
                         <label htmlFor="firstName" className="block text-sm font-medium text-neutral-700 mb-1">
                           First Name*
@@ -121,7 +121,7 @@ const QuoteForm = () => {
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
                       <div>
                         <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-1">
                           Email Address*
@@ -152,7 +152,7 @@ const QuoteForm = () => {
                       </div>
                     </div>
 
-                    <div className="mb-6">
+                    <div className="mb-4 md:mb-6">
                       <label htmlFor="company" className="block text-sm font-medium text-neutral-700 mb-1">
                         Company Name*
                       </label>
@@ -167,7 +167,7 @@ const QuoteForm = () => {
                       />
                     </div>
 
-                    <div className="mb-6">
+                    <div className="mb-4 md:mb-6">
                       <label htmlFor="productInterest" className="block text-sm font-medium text-neutral-700 mb-1">
                         Product Interest*
                       </label>
@@ -189,7 +189,7 @@ const QuoteForm = () => {
                       </select>
                     </div>
 
-                    <div className="mb-6">
+                    <div className="mb-4 md:mb-6">
                       <label htmlFor="volume" className="block text-sm font-medium text-neutral-700 mb-1">
                         Estimated Volume (Tonnes/Month)
                       </label>
@@ -203,7 +203,7 @@ const QuoteForm = () => {
                       />
                     </div>
 
-                    <div className="mb-6">
+                    <div className="mb-4 md:mb-6">
                       <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-1">
                         Message & Requirements*
                       </label>
@@ -219,7 +219,7 @@ const QuoteForm = () => {
                       />
                     </div>
 
-                    <div className="mb-8">
+                    <div className="mb-6 md:mb-8">
                       <label className="flex items-start">
                         <input
                           type="checkbox"
@@ -229,7 +229,7 @@ const QuoteForm = () => {
                           required
                           className="mt-1 mr-3 focus:ring-2 focus:ring-vitablue cursor-pointer"
                         />
-                        <span className="text-sm text-neutral-600">
+                        <span className="text-xs md:text-sm text-neutral-600">
                           I consent to VitaniumX collecting and processing my personal data for the purpose of providing me with a quote. 
                           I understand that my information will be handled in accordance with the privacy policy.
                         </span>
@@ -238,7 +238,7 @@ const QuoteForm = () => {
 
                     <Button
                       type="submit"
-                      className="bg-vitablue hover:bg-vitablue-dark w-full py-7 text-white font-medium hover:shadow-lg transition-all duration-300 hover-pop glow-vitablue"
+                      className="bg-vitablue hover:bg-vitablue-dark w-full py-5 md:py-7 text-white font-medium hover:shadow-lg transition-all duration-300 hover-pop glow-vitablue"
                     >
                       Submit Quote Request
                     </Button>
@@ -249,34 +249,34 @@ const QuoteForm = () => {
 
             <div>
               <ScrollReveal delay={200}>
-                <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-100 hover:shadow-xl transition-all">
-                  <h3 className="text-xl font-bold mb-6">Why Choose VitaniumX?</h3>
-                  <ul className="space-y-4">
+                <div className="bg-neutral-50 p-4 md:p-8 rounded-xl shadow-lg border border-neutral-100 hover:shadow-xl transition-all">
+                  <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6">Why Choose VitaniumX?</h3>
+                  <ul className="space-y-3 md:space-y-4">
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-vitablue mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="text-neutral-700">Multiple quality certifications including GMP and ISO</span>
+                      <CheckCircle className="h-5 w-5 text-vitablue mr-2 md:mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base text-neutral-700">Multiple quality certifications including GMP and ISO</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-vitablue mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="text-neutral-700">10 tonnes daily production capacity</span>
+                      <CheckCircle className="h-5 w-5 text-vitablue mr-2 md:mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base text-neutral-700">10 tonnes daily production capacity</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-vitablue mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="text-neutral-700">Advanced testing equipment for quality assurance</span>
+                      <CheckCircle className="h-5 w-5 text-vitablue mr-2 md:mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base text-neutral-700">Advanced testing equipment for quality assurance</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-vitablue mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="text-neutral-700">Customized formulations tailored to your needs</span>
+                      <CheckCircle className="h-5 w-5 text-vitablue mr-2 md:mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base text-neutral-700">Customized formulations tailored to your needs</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-vitablue mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="text-neutral-700">Proven track record with government programs</span>
+                      <CheckCircle className="h-5 w-5 text-vitablue mr-2 md:mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base text-neutral-700">Proven track record with government programs</span>
                     </li>
                   </ul>
 
-                  <div className="mt-8 pt-8 border-t border-neutral-200">
-                    <h3 className="text-xl font-bold mb-4">Contact Information</h3>
-                    <div className="space-y-2 text-neutral-700">
+                  <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-neutral-200">
+                    <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Contact Information</h3>
+                    <div className="space-y-1 md:space-y-2 text-sm md:text-base text-neutral-700">
                       <p>
                         <span className="font-medium">Phone:</span> +91 94296 94121
                       </p>

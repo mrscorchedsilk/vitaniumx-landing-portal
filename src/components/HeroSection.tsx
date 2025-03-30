@@ -8,12 +8,12 @@ const HeroSection = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        {/* Left side - Hero content */}
+        {/* Left side - Hero content - Now displayed first on mobile */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="order-2 lg:order-1"
+          className="order-1 lg:order-1"
         >
           <div className="text-left">
             <div className="inline-block glass rounded-full px-5 py-1.5 text-base font-bold text-gradient mb-6 shadow-[0_0_10px_rgba(0,100,255,0.5)]">
@@ -58,7 +58,7 @@ const HeroSection = () => {
             </ul>
             
             <div className="mt-8">
-              <button className="bg-[#1EAEDB] hover:bg-[#1a9ac3] text-white font-medium py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg hover-pop">
+              <button className="w-full md:w-auto bg-[#1EAEDB] hover:bg-[#1a9ac3] text-white font-medium py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg hover-pop">
                 REQUEST FOR CALL BACK
               </button>
             </div>
@@ -104,14 +104,14 @@ const HeroSection = () => {
           </div>
         </motion.div>
         
-        {/* Right side - Form */}
+        {/* Right side - Form - Now displayed second on mobile */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="order-1 lg:order-2"
+          className="order-2 lg:order-2"
         >
-          <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-white/30 glow-vitablue hover:shadow-xl transition-all duration-300">
+          <div className="bg-white/90 backdrop-blur-sm p-4 md:p-8 rounded-xl shadow-lg border border-white/30 glow-vitablue hover:shadow-xl transition-all duration-300">
             <ContactForm />
           </div>
         </motion.div>
