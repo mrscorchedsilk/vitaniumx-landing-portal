@@ -30,26 +30,32 @@ const Achievements = () => {
           Achievements & Impact
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-bold mx-auto max-w-4xl">
-               <StatCard 
-               number="573M+"
-               text="Fortified Meals Delivered"
-               delay={200}
-               className="glow-vitablue hover-pop"
-               />
-               <StatCard 
-               number="10"
-               text="Tonnes Daily Production"
-               delay={400}
-               className="glow-vitablue hover-pop"
-               />
-               <StatCard 
-               number="100%"
-               text="Quality Assurance"
-               delay={600}
-               className="glow-vitablue hover-pop"
-               />
-             </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 font-bold">
+          <StatCard 
+            number="573M+"
+            text="Fortified Meals Delivered"
+            delay={200}
+            className="glow-vitablue hover-pop"
+          />
+          <StatCard 
+            number="114,736"
+            text="Tonnes of Food Fortified"
+            delay={400}
+            className="glow-vitablue hover-pop"
+          />
+          <StatCard 
+            number="10"
+            text="Tonnes Daily Production"
+            delay={600}
+            className="glow-vitablue hover-pop"
+          />
+          <StatCard 
+            number="100%"
+            text="Quality Assurance"
+            delay={800}
+            className="glow-vitablue hover-pop"
+          />
+        </div>
       </div>
     </section>
   );
