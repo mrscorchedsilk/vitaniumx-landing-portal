@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Navbar from '@/components/Navbar';
 import PageHeader from '@/components/PageHeader';
 import Hero from '@/components/Hero';
 import QuoteForm from '@/components/QuoteForm';
@@ -15,34 +16,40 @@ import Footer from '@/components/Footer';
 const Index = () => {
   return (
     <div className="min-h-screen bg-abstract">
-      {/* Header with Hero Section */}
-      <Hero />
-        {/* Form Section */}
-      <QuoteForm />
-
-      {/* Partners Section */}
-      <TrustedPartnersSection />
-
-      {/* Why Choose Us Section */}
-      <WhyChooseUs />
-
-      {/* Achievements Section */}
-      <Achievements />
+      {/* Navbar */}
+      <Navbar />
       
-      {/* Partnership Section */}
-      <PartnershipSection />
-      
-      {/* Second Partnership Section */}
-      <PartnershipSection2 />
+      {/* Add padding top to account for fixed navbar */}
+      <div className="pt-20">
+        {/* Hero Section */}
+        <Hero />
+          {/* Form Section */}
+        <QuoteForm />
 
-      {/* Products Section */}
-      <ProductsSection />
+        {/* Partners Section */}
+        <TrustedPartnersSection />
 
-      {/* CTA Section */}
-      <CallToAction />
+        {/* Why Choose Us Section */}
+        <WhyChooseUs />
 
-      {/* Footer */}
-      <Footer />
+        {/* Achievements Section */}
+        <Achievements />
+        
+        {/* Partnership Section */}
+        <PartnershipSection />
+        
+        {/* Second Partnership Section */}
+        <PartnershipSection2 />
+
+        {/* Products Section */}
+        <ProductsSection />
+
+        {/* CTA Section */}
+        <CallToAction />
+
+        {/* Footer */}
+        <Footer />
+      </div>
     </div>
   );
 };

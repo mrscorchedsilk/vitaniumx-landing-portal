@@ -184,10 +184,16 @@
   
   .hover-pop-sm:hover {
     transform: translateY(-5px) scale(1.01);
+    box-shadow: 
+      0 10px 20px -8px rgba(0, 0, 0, 0.15),
+      0 0 20px 5px rgba(30, 174, 219, 0.3);
   }
   
   .glass-card.hover-pop:hover {
     @apply bg-white/50;
   }
+  
+  .glass-card.hover-pop-sm:hover {
+    @apply bg-white/50;
+  }
 }
-

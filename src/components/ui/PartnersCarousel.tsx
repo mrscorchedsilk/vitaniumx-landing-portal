@@ -30,7 +30,7 @@ const PartnersCarousel = ({ logos }: PartnersCarouselProps) => {
       <CarouselContent className="py-4">
         {logos.map((logo, index) => (
           <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4 pl-4">
-            <div className="glass-card h-40 flex items-center justify-center p-4">
+            <div className="glass-card h-40 flex items-center justify-center p-4 hover-pop-sm">
               <img
                 src={logo.src}
                 alt={logo.alt}
