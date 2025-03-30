@@ -37,24 +37,24 @@ const ProductsSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ProductCard 
-            title="Staple Food Fortification"
-            description="We manufacture premium wheat flour premixes, fortifying everyday staples with vital nutrients to improve health and nutrition."
+            title="Micronutrient Premixes"
+            description="Fortification solutions for wheat flour, rice (including Fortified Rice Kernels), milk, and oil."
             icon={<Wheat className="text-vitablue h-8 w-8" />}
             delay={200}
             bgColor="bg-[#F2FCE2]"
             className="glow-green hover-pop"
           />
           <ProductCard 
-            title="Public Health Nutrition Scheme Fortification"
-            description="As a leading manufacturer, we provide high-quality FRK premixes to enhance rice with essential vitamins and minerals, helping to combat malnutrition."
+            title="Government Nutritional Schemes"
+            description="Custom blends for government schemes targeting health and nutrition needs across populations."
             icon={<Heart className="text-vitablue h-8 w-8" />}
             delay={400}
             bgColor="bg-[#FFDEE2]"
             className="glow-vitablue hover-pop"
           />
           <ProductCard 
-            title="Nutraceutical Applications"
-            description="As manufacturers, we offer fortified rice kernels that enrich rice with critical nutrients, promoting healthier diets and communities."
+            title="Therapeutic Foods"
+            description="Specialized, nutrient-dense formulations for acute malnutrition (WFP standards)."
             icon={<Shield className="text-vitablue h-8 w-8" />}
             delay={600}
             bgColor="bg-[#D3E4FD]"
@@ -70,15 +70,15 @@ const ProductsSection = () => {
           />
           <ProductCard 
             title="Animal Nutrition"
-            description="We produce fortified edible oils and milk, enhancing their nutritional content to improve public health and meet dietary needs."
+            description="Vitamin and mineral premixes for livestock, poultry, and aquaculture feed."
             icon={<Info className="text-vitablue h-8 w-8" />}
             delay={1000}
             bgColor="bg-[#E5DEFF]"
             className="glow-multi hover-pop"
           />
           <ProductCard 
-            title="FMCG Products"
-            description="We specialize in manufacturing food fortified premixes that boost the nutritional value of various food products, ensuring better health for consumers."
+            title="FMCG Fortification"
+            description="Solutions for breads, biscuits, breakfast cereals, fruit juices, and more."
             icon={<Check className="text-vitablue h-8 w-8" />}
             delay={1200}
             bgColor="bg-[#FEF7CD]"
@@ -87,7 +87,7 @@ const ProductsSection = () => {
         </div>
         
         {/* Floating particles */}
-        {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(10)].map((_, i) => (
             <motion.div
               key={i}
@@ -111,7 +111,7 @@ const ProductsSection = () => {
               }}
             />
           ))}
-        </div> */}
+        </div>
       </div>
     </section>
   );
