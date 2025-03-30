@@ -1,8 +1,8 @@
 
 import React from 'react';
-import Hero from '@/components/Hero';
 import ContactForm from '@/components/ContactForm';
 import { motion } from 'framer-motion';
+import FloatingCertificationLogo from './ui/FloatingCertificationLogo';
 
 const HeroSection = () => {
   return (
@@ -58,17 +58,17 @@ const HeroSection = () => {
             </ul>
             
             <div className="mt-8">
-              <button className="bg-[#1EAEDB] hover:bg-[#1a9ac3] text-white font-medium py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg">
+              <button className="bg-[#1EAEDB] hover:bg-[#1a9ac3] text-white font-medium py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg hover-pop">
                 REQUEST FOR CALL BACK
               </button>
             </div>
             
-            {/* Certification Icons Section */}
+            {/* Certification Icons Section with Floating Effect */}
             <div className="flex flex-wrap gap-4 mt-8">
-              <img src="/lovable-uploads/gmp.png" alt="GMP Certified" className="h-16" />
-              <img src="/lovable-uploads/fssai.webp" alt="FSSAI Certified" className="h-16" />
-              <img src="/lovable-uploads/7fc3bae2-9485-4fc2-b7e0-91e18ba73ae6.png" alt="100% Vegan" className="h-16" />
-              <img src="/lovable-uploads/0fd9b7b7-e731-4f37-b7fe-a5cc7210aae8.png" alt="ISO 9001 Certified" className="h-16" />
+              <FloatingCertificationLogo src="/lovable-uploads/gmp.png" alt="GMP Certified" size="md" delay={0} />
+              <FloatingCertificationLogo src="/lovable-uploads/fssai.webp" alt="FSSAI Certified" size="md" delay={0.5} />
+              <FloatingCertificationLogo src="/lovable-uploads/7fc3bae2-9485-4fc2-b7e0-91e18ba73ae6.png" alt="100% Vegan" size="md" delay={1} />
+              <FloatingCertificationLogo src="/lovable-uploads/0fd9b7b7-e731-4f37-b7fe-a5cc7210aae8.png" alt="ISO 9001 Certified" size="md" delay={1.5} />
             </div>
           </div>
         </motion.div>
@@ -80,7 +80,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="order-1 lg:order-2"
         >
-          <div className="bg-white p-8 rounded-xl shadow-lg">
+          <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-white/30 glow-vitablue hover:shadow-xl transition-all duration-300">
             <ContactForm />
           </div>
         </motion.div>

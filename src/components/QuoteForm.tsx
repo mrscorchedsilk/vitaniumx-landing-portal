@@ -6,6 +6,7 @@ import { toast } from 'sonner';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import FloatingCertificationLogo from '@/components/ui/FloatingCertificationLogo';
 
 const QuoteForm = () => {
   const [formData, setFormData] = useState({
@@ -69,7 +70,25 @@ const QuoteForm = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
               <ScrollReveal>
-                <div className="bg-white p-8 rounded-xl shadow-subtle border border-neutral-100 shadow-[0_0_15px_rgba(58,183,250,0.3)] hover:shadow-[0_0_20px_rgba(58,183,250,0.5)] transition-all duration-300">
+                <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-subtle border border-neutral-100 shadow-[0_0_25px_rgba(58,183,250,0.3)] hover:shadow-[0_0_30px_rgba(58,183,250,0.5)] transition-all duration-300 relative overflow-hidden">
+                  {/* Floating Certification Logos */}
+                  <div className="absolute -right-10 -top-10 opacity-20 pointer-events-none">
+                    <FloatingCertificationLogo 
+                      src="/lovable-uploads/fssai.webp" 
+                      alt="FSSAI Certification" 
+                      size="xl"
+                      delay={0.2}
+                    />
+                  </div>
+                  <div className="absolute -left-10 -bottom-10 opacity-20 pointer-events-none">
+                    <FloatingCertificationLogo 
+                      src="/lovable-uploads/gmp.png" 
+                      alt="GMP Certification" 
+                      size="xl"
+                      delay={0.5}
+                    />
+                  </div>
+                  
                   <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                       <div>
@@ -228,9 +247,9 @@ const QuoteForm = () => {
               </ScrollReveal>
             </div>
 
-            {/* <div>
+            <div>
               <ScrollReveal delay={200}>
-                <div className="bg-neutral-50 p-8 rounded-xl">
+                <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-100 hover:shadow-xl transition-all">
                   <h3 className="text-xl font-bold mb-6">Why Choose VitaniumX?</h3>
                   <ul className="space-y-4">
                     <li className="flex items-start">
@@ -268,7 +287,7 @@ const QuoteForm = () => {
                   </div>
                 </div>
               </ScrollReveal>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

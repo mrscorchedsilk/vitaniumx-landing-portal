@@ -2,6 +2,7 @@
 import React from 'react';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { motion } from 'framer-motion';
+import PartnersCarousel from '@/components/ui/PartnersCarousel';
 
 const TrustedPartnersSection = () => {
   const partnerLogos = [
@@ -48,10 +49,10 @@ const TrustedPartnersSection = () => {
   ];
 
   return (
-    <section className="py-16 relative overflow-hidden bg-transparent">
+    <section className="py-16 relative overflow-hidden bg-gradient-to-r from-vitablue/50 to-blue-600/50">
       {/* Animated background glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-vitagray/30 rounded-full filter blur-[80px] animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-vitablue/30 rounded-full filter blur-[80px] animate-pulse"></div>
       </div>
       
       {/* Semi-transparent overlay for better readability */}
@@ -76,29 +77,9 @@ const TrustedPartnersSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
+          className="overflow-hidden"
         >
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4">
-            {partnerLogos.map((logo, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.1 * index }}
-                className="flex items-center justify-center p-4 bg-white/50 rounded-lg shadow hover:shadow-lg hover-pop-sm transition-all duration-300"
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0px 10px 25px rgba(0, 0, 0, 0.1)"
-                }}
-              >
-                <img 
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="max-h-16 w-auto object-contain"
-                />
-              </motion.div>
-            ))}
-          </div>
+          <PartnersCarousel logos={partnerLogos} />
         </motion.div>
       </div>
     </section>

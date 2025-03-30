@@ -1,6 +1,7 @@
 
 import React from 'react';
 import AnimatedElement from '@/components/ui/AnimatedElement';
+import { motion } from 'framer-motion';
 
 interface FloatingCertificationLogoProps {
   src: string;
@@ -25,19 +26,27 @@ const FloatingCertificationLogo: React.FC<FloatingCertificationLogoProps> = ({
   };
 
   return (
-    <AnimatedElement 
-      animation="float" 
-      delay={delay} 
-      className={`rounded-full flex items-center justify-center ${className}`}
-      viewportOnce={true}
-      skipHiddenState={true} // This will prevent the blinking effect by skipping the hidden state
+    <motion.div
+      initial={{ y: 0 }}
+      animate={{ 
+        y: [0, -10, 0],
+        rotate: [-1, 1, -1]
+      }}
+      transition={{ 
+        duration: 6,
+        repeat: Infinity, 
+        repeatType: "reverse",
+        delay: delay,
+        ease: "easeInOut"
+      }}
+      className={`rounded-full flex items-center justify-center ${className} glow-white`}
     >
       <img 
         src={src} 
         alt={alt} 
-        className={`${sizeClasses[size]} object-contain`}
+        className={`${sizeClasses[size]} object-contain drop-shadow-lg`}
       />
-    </AnimatedElement>
+    </motion.div>
   );
 };
 
