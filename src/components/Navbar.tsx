@@ -2,8 +2,9 @@
 import React from 'react';
 import Logo from '@/components/Logo';
 import { Button } from '@/components/ui/button';
-import { Phone, Calendar } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
+import BookingCalendar from '@/components/BookingCalendar';
 
 const Navbar = () => {
   return (
@@ -25,13 +26,7 @@ const Navbar = () => {
             <span className="md:hidden">Call</span>
           </Button>
           
-          <Button 
-            className="bg-green-500 hover:bg-green-600 text-white shadow-[0_0_15px_rgba(37,211,102,0.5)] w-full md:w-auto"
-            size="sm"
-          >
-            <Calendar className="mr-2 h-4 w-4" />
-            <span>Schedule a call</span>
-          </Button>
+          <BookingCalendar />
         </div>
       </div>
     </header>
