@@ -6,12 +6,14 @@ interface ScrollRevealProps {
   children: ReactNode;
   delay?: number;
   animation?: "fade" | "slide-up" | "slide-left" | "scale" | "none";
+  className?: string; // Add className prop
 }
 
 const ScrollReveal = ({ 
   children, 
   delay = 0, 
-  animation = "fade" 
+  animation = "fade",
+  className = "" // Add default empty string
 }: ScrollRevealProps) => {
   // Define animation variants based on the animation type
   const getAnimationProps = () => {
@@ -59,6 +61,7 @@ const ScrollReveal = ({
 
   return (
     <motion.div
+      className={className} // Pass the className prop to motion.div
       initial={animationProps.initial}
       animate={animationProps.animate}
       transition={animationProps.transition}
