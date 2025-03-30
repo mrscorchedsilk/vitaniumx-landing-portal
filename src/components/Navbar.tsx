@@ -20,29 +20,24 @@ const Navbar = () => {
         
         {/* Buttons on the right */}
         <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
-          <Button 
-            className="bg-[#3AB7FA] hover:bg-[#2a9de6] text-white shadow-[0_0_15px_rgba(58,183,250,0.5)] w-full md:w-auto"
-            size="sm"
-            onClick={() => {
-              if (isMobile) {
-                window.location.href = "tel:+919876543210";
-              }
-            }}
-            asChild={!isMobile}
-          >
-            {!isMobile ? (
-              <div>
-                <Phone className="mr-2 h-4 w-4" />
-                <span className="hidden md:inline">+91 98765 43210</span>
-                <span className="md:hidden">Call</span>
-              </div>
-            ) : (
-              <a href="tel:+919876543210">
-                <Phone className="mr-2 h-4 w-4" />
-                <span>Call</span>
-              </a>
-            )}
-          </Button>
+          {isMobile ? (
+            <a 
+              href="tel:+919876543210" 
+              className="flex items-center justify-center w-full md:w-auto bg-[#59B2F4] hover:bg-[#3AA1F0] text-white font-medium py-3 px-6 rounded-lg shadow-md"
+            >
+              <Phone className="mr-2 h-4 w-4" />
+              Call
+            </a>
+          ) : (
+            <Button 
+              className="bg-[#3AB7FA] hover:bg-[#2a9de6] text-white shadow-[0_0_15px_rgba(58,183,250,0.5)] w-full md:w-auto"
+              size="sm"
+            >
+              <Phone className="mr-2 h-4 w-4" />
+              <span className="hidden md:inline">+91 98765 43210</span>
+              <span className="md:hidden">Call</span>
+            </Button>
+          )}
           
           <BookingCalendar />
         </div>
