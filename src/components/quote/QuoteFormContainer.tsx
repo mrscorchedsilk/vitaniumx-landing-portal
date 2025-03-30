@@ -53,6 +53,9 @@ export const QuoteFormContainer = () => {
   return (
     <ScrollReveal>
       <div className="bg-white/90 backdrop-blur-sm p-4 md:p-8 rounded-xl shadow-subtle border border-neutral-100 shadow-[0_0_25px_rgba(58,183,250,0.3)] hover:shadow-[0_0_30px_rgba(58,183,250,0.5)] transition-all duration-300 relative overflow-hidden">
+        {/* Blue tinted background */}
+        <div className="absolute inset-0 bg-vitablue/5 pointer-events-none z-0"></div>
+        
         {/* Floating Certification Logos */}
         <div className="absolute -right-10 -top-10 opacity-20 pointer-events-none">
           <FloatingCertificationLogo 
@@ -60,6 +63,7 @@ export const QuoteFormContainer = () => {
             alt="FSSAI Certification" 
             size="xl"
             delay={0.2}
+            glowColor="rgba(30, 174, 219, 0.5)"
           />
         </div>
         <div className="absolute -left-10 -bottom-10 opacity-20 pointer-events-none">
@@ -68,10 +72,11 @@ export const QuoteFormContainer = () => {
             alt="GMP Certification" 
             size="xl"
             delay={0.5}
+            glowColor="rgba(30, 174, 219, 0.5)"
           />
         </div>
         
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="relative z-10">
           <QuoteFormInputs formData={formData} handleChange={handleChange} />
 
           <Button

@@ -18,13 +18,13 @@ const FloatingCertificationLogo: React.FC<FloatingCertificationLogoProps> = ({
   className = '',
   delay = 0,
   size = 'md',
-  glowColor = 'rgba(255, 255, 255, 0.6)'
+  glowColor = 'rgba(30, 174, 219, 0.5)'
 }) => {
   const sizeClasses = {
-    sm: 'h-12 w-12',
-    md: 'h-20 w-20',
-    lg: 'h-24 w-24',
-    xl: 'h-28 w-28'
+    sm: 'h-10 w-10 md:h-12 md:w-12',
+    md: 'h-14 w-14 md:h-20 md:w-20',
+    lg: 'h-16 w-16 md:h-24 md:w-24',
+    xl: 'h-20 w-20 md:h-28 md:w-28'
   };
 
   return (
@@ -43,7 +43,7 @@ const FloatingCertificationLogo: React.FC<FloatingCertificationLogoProps> = ({
       }}
       className={`rounded-full flex items-center justify-center ${className}`}
       style={{
-        boxShadow: `0 0 20px 5px ${glowColor}`,
+        boxShadow: `0 0 15px 5px ${glowColor}`,
         transition: 'box-shadow 0.3s ease'
       }}
     >
