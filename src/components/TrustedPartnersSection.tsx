@@ -1,5 +1,5 @@
+
 import React from 'react';
-import PartnersCarousel from '@/components/ui/PartnersCarousel';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { motion } from 'framer-motion';
 
@@ -45,7 +45,6 @@ const TrustedPartnersSection = () => {
       src: "/lovable-uploads/haryana_gov_logo.png",
       alt: "Government of Haryana",
     }
-    
   ];
 
   return (
@@ -77,9 +76,29 @@ const TrustedPartnersSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="px-4 rounded-xl p-4"
         >
-          <PartnersCarousel logos={partnerLogos} />
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4">
+            {partnerLogos.map((logo, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 0.1 * index }}
+                className="flex items-center justify-center p-4 bg-white/50 rounded-lg shadow hover:shadow-lg hover-pop-sm transition-all duration-300"
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0px 10px 25px rgba(0, 0, 0, 0.1)"
+                }}
+              >
+                <img 
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="max-h-16 w-auto object-contain"
+                />
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

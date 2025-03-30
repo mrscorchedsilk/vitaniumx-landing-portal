@@ -1,9 +1,7 @@
 
 import React from 'react';
 import Navbar from '@/components/Navbar';
-import PageHeader from '@/components/PageHeader';
-import Hero from '@/components/Hero';
-import QuoteForm from '@/components/QuoteForm';
+import HeroSection from '@/components/HeroSection';
 import TrustedPartnersSection from '@/components/TrustedPartnersSection';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Achievements from '@/components/Achievements';
@@ -21,10 +19,8 @@ const Index = () => {
       
       {/* Add padding top to account for fixed navbar */}
       <div className="pt-20">
-        {/* Hero Section */}
-        <Hero />
-          {/* Form Section */}
-        <QuoteForm />
+        {/* Hero Section with Side-by-side Form */}
+        <HeroSection />
 
         {/* Partners Section */}
         <TrustedPartnersSection />
