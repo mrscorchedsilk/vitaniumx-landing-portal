@@ -3,8 +3,11 @@ import React from 'react';
 import ContactForm from '@/components/ContactForm';
 import { motion } from 'framer-motion';
 import FloatingCertificationLogo from './ui/FloatingCertificationLogo';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const HeroSection = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -63,49 +66,89 @@ const HeroSection = () => {
               </button>
             </div>
             
-            {/* Certification Icons Section with Floating Effect - Now center aligned on mobile */}
+            {/* Certification Icons Section with Floating Effect */}
             <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
-              <div className="flex flex-wrap justify-center gap-4 w-full">
-                <div className="flex gap-4 flex-wrap justify-center">
+              {isMobile ? (
+                <div className="flex flex-col items-center w-full">
+                  <div className="flex gap-4 justify-center mb-4">
+                    <FloatingCertificationLogo 
+                      src="/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
+                      alt="FSSC 22000 Certified" 
+                      size="sm"
+                      delay={0} 
+                      glowColor="rgba(30, 174, 219, 0.5)"
+                    />
+                    <FloatingCertificationLogo 
+                      src="/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
+                      alt="GMP Certified" 
+                      size="sm" 
+                      delay={0.5}
+                      glowColor="rgba(30, 174, 219, 0.5)"
+                    />
+                    <FloatingCertificationLogo 
+                      src="/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
+                      alt="FSSAI Certified" 
+                      size="sm" 
+                      delay={1}
+                      glowColor="rgba(30, 174, 219, 0.5)"
+                    />
+                  </div>
+                  <div className="flex gap-8 justify-center">
+                    <FloatingCertificationLogo 
+                      src="/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
+                      alt="ISO 9001:2015 Certified" 
+                      size="sm" 
+                      delay={1.5}
+                      glowColor="rgba(30, 174, 219, 0.5)"
+                    />
+                    <FloatingCertificationLogo 
+                      src="/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
+                      alt="ISO 22000:2018 Certified" 
+                      size="sm" 
+                      delay={2}
+                      glowColor="rgba(30, 174, 219, 0.5)"
+                    />
+                  </div>
+                </div>
+              ) : (
+                <div className="flex gap-6 flex-wrap">
                   <FloatingCertificationLogo 
                     src="/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
                     alt="FSSC 22000 Certified" 
-                    size="sm" 
+                    size="md" 
                     delay={0} 
                     glowColor="rgba(30, 174, 219, 0.5)"
                   />
                   <FloatingCertificationLogo 
                     src="/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
                     alt="GMP Certified" 
-                    size="sm" 
+                    size="md" 
                     delay={0.5}
                     glowColor="rgba(30, 174, 219, 0.5)"
                   />
                   <FloatingCertificationLogo 
                     src="/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
                     alt="FSSAI Certified" 
-                    size="sm" 
+                    size="md" 
                     delay={1}
                     glowColor="rgba(30, 174, 219, 0.5)"
                   />
-                </div>
-                <div className="flex gap-4 justify-center">
                   <FloatingCertificationLogo 
                     src="/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
                     alt="ISO 9001:2015 Certified" 
-                    size="sm" 
+                    size="md" 
                     delay={1.5}
                     glowColor="rgba(30, 174, 219, 0.5)"
                   />
                   <FloatingCertificationLogo 
                     src="/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
                     alt="ISO 22000:2018 Certified" 
-                    size="sm" 
+                    size="md" 
                     delay={2}
                     glowColor="rgba(30, 174, 219, 0.5)"
                   />
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </motion.div>

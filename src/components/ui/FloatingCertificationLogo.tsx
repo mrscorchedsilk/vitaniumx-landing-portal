@@ -2,6 +2,7 @@
 import React from 'react';
 import AnimatedElement from '@/components/ui/AnimatedElement';
 import { motion } from 'framer-motion';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface FloatingCertificationLogoProps {
   src: string;
@@ -20,11 +21,14 @@ const FloatingCertificationLogo: React.FC<FloatingCertificationLogoProps> = ({
   size = 'md',
   glowColor = 'rgba(30, 174, 219, 0.5)'
 }) => {
+  const isMobile = useIsMobile();
+  
+  // Define size classes based on the size prop with bigger sizes for desktop
   const sizeClasses = {
-    sm: 'h-10 w-10 md:h-12 md:w-12',
-    md: 'h-14 w-14 md:h-20 md:w-20',
-    lg: 'h-16 w-16 md:h-24 md:w-24',
-    xl: 'h-20 w-20 md:h-28 md:w-28'
+    sm: isMobile ? 'h-10 w-10' : 'h-16 w-16',
+    md: isMobile ? 'h-14 w-14' : 'h-20 w-20',
+    lg: isMobile ? 'h-16 w-16' : 'h-24 w-24',
+    xl: isMobile ? 'h-20 w-20' : 'h-28 w-28'
   };
 
   return (
