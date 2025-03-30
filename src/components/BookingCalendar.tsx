@@ -1,8 +1,9 @@
 
 import React, { useEffect, useRef } from 'react';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Calendar } from 'lucide-react';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 interface BookingCalendarProps {
   className?: string;
@@ -38,17 +39,18 @@ const BookingCalendar: React.FC<BookingCalendarProps> = ({ className }) => {
           <span>Schedule a call</span>
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[600px] max-h-[80vh] overflow-hidden">
-        <div className="w-full h-[500px]">
+      <DialogContent className="sm:max-w-[600px] max-h-[90vh]">
+        <DialogTitle className="sr-only">Schedule a call</DialogTitle>
+        <ScrollArea className="h-[70vh] w-full">
           <iframe 
             ref={iframeRef}
             src="https://api.leadconnectorhq.com/widget/booking/Dg6f95EVDvXwEgZ930Y4"
-            style={{ width: '100%', height: '100%', border: 'none' }}
-            scrolling="no"
+            style={{ width: '100%', height: '700px', border: 'none' }}
             id="Dg6f95EVDvXwEgZ930Y4_1743272468446"
             title="Schedule a call"
+            allow="fullscreen"
           />
-        </div>
+        </ScrollArea>
       </DialogContent>
     </Dialog>
   );
