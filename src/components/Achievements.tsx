@@ -43,7 +43,7 @@ const Achievements = () => {
           <StatCard 
             number="200k+"
             text="Sales of our Products"
-            delay={600}
+            delay={400}
             className="glow-vitablue hover-pop"
           />
           <StatCard 
