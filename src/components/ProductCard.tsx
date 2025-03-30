@@ -42,8 +42,8 @@ const ProductCard = ({
         </div>
       )}
       
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4 flex-grow">{description}</p>
+      <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
+      <p className="text-white/90 mb-4 flex-grow">{description}</p>
     </div>
   );
 };
