@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ProductCard from '@/components/ProductCard';
-import { Wheat, Heart, Shield, Globe, Info, Check } from 'lucide-react';
+import { Wheat, Heart, Shield, Globe, Leaf, ShoppingCart } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const ProductsSection = () => {
@@ -75,7 +75,7 @@ const ProductsSection = () => {
           <ProductCard 
             title="Animal Nutrition"
             description="We produce fortified edible oils and milk, enhancing their nutritional content to improve public health and meet dietary needs."
-            icon={<Info className="text-vitablue h-8 w-8" />}
+            icon={<Leaf className="text-green-600 h-8 w-8" />}
             imageSrc="/lovable-uploads/animal-nutrition-hero.webp"
             delay={1000}
             bgColor="bg-[#E5DEFF]"
@@ -84,7 +84,7 @@ const ProductsSection = () => {
           <ProductCard 
             title="FMCG Products"
             description="We specialize in manufacturing food fortified premixes that boost the nutritional value of various food products, ensuring better health for consumers."
-            icon={<Check className="text-vitablue h-8 w-8" />}
+            icon={<ShoppingCart className="text-orange-500 h-8 w-8" />}
             imageSrc="/lovable-uploads/fmcg-premix.jpg"
             delay={1200}
             bgColor="bg-[#FEF7CD]"

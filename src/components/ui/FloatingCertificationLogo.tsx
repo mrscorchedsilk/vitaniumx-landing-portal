@@ -9,6 +9,7 @@ interface FloatingCertificationLogoProps {
   className?: string;
   delay?: number;
   size?: 'sm' | 'md' | 'lg' | 'xl';
+  glowColor?: string;
 }
 
 const FloatingCertificationLogo: React.FC<FloatingCertificationLogoProps> = ({
@@ -16,7 +17,8 @@ const FloatingCertificationLogo: React.FC<FloatingCertificationLogoProps> = ({
   alt,
   className = '',
   delay = 0,
-  size = 'md'
+  size = 'md',
+  glowColor = 'rgba(255, 255, 255, 0.6)'
 }) => {
   const sizeClasses = {
     sm: 'h-12 w-12',
@@ -29,17 +31,21 @@ const FloatingCertificationLogo: React.FC<FloatingCertificationLogoProps> = ({
     <motion.div
       initial={{ y: 0 }}
       animate={{ 
-        y: [0, -10, 0],
+        y: [0, -12, 0],
         rotate: [-1, 1, -1]
       }}
       transition={{ 
-        duration: 6,
+        duration: 8,
         repeat: Infinity, 
         repeatType: "reverse",
         delay: delay,
         ease: "easeInOut"
       }}
-      className={`rounded-full flex items-center justify-center ${className} glow-white`}
+      className={`rounded-full flex items-center justify-center ${className}`}
+      style={{
+        boxShadow: `0 0 20px 5px ${glowColor}`,
+        transition: 'box-shadow 0.3s ease'
+      }}
     >
       <img 
         src={src} 

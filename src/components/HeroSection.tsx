@@ -65,10 +65,41 @@ const HeroSection = () => {
             
             {/* Certification Icons Section with Floating Effect */}
             <div className="flex flex-wrap gap-4 mt-8">
-              <FloatingCertificationLogo src="/lovable-uploads/gmp.png" alt="GMP Certified" size="md" delay={0} />
-              <FloatingCertificationLogo src="/lovable-uploads/fssai.webp" alt="FSSAI Certified" size="md" delay={0.5} />
-              <FloatingCertificationLogo src="/lovable-uploads/7fc3bae2-9485-4fc2-b7e0-91e18ba73ae6.png" alt="100% Vegan" size="md" delay={1} />
-              <FloatingCertificationLogo src="/lovable-uploads/0fd9b7b7-e731-4f37-b7fe-a5cc7210aae8.png" alt="ISO 9001 Certified" size="md" delay={1.5} />
+              <FloatingCertificationLogo 
+                src="/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
+                alt="FSSC 22000 Certified" 
+                size="md" 
+                delay={0} 
+                glowColor="rgba(220, 80, 80, 0.4)"
+              />
+              <FloatingCertificationLogo 
+                src="/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
+                alt="GMP Certified" 
+                size="md" 
+                delay={0.5}
+                glowColor="rgba(74, 222, 128, 0.4)"
+              />
+              <FloatingCertificationLogo 
+                src="/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
+                alt="FSSAI Certified" 
+                size="md" 
+                delay={1}
+                glowColor="rgba(80, 70, 220, 0.4)"
+              />
+              <FloatingCertificationLogo 
+                src="/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
+                alt="ISO 9001:2015 Certified" 
+                size="md" 
+                delay={1.5}
+                glowColor="rgba(30, 144, 255, 0.4)"
+              />
+              <FloatingCertificationLogo 
+                src="/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
+                alt="ISO 22000:2018 Certified" 
+                size="md" 
+                delay={2}
+                glowColor="rgba(30, 144, 255, 0.4)"
+              />
             </div>
           </div>
         </motion.div>
