@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Logo from '@/components/Logo';
 import CertificationIcon from '@/components/CertificationIcon';
@@ -63,34 +64,79 @@ const Hero = () => {
           </Button>
         </motion.div>
 
-        {/* Certification Icons Section */}
-        <div className="flex justify-center flex-wrap gap-4 pt-8">
+        {/* Certification Icons Section - Reorganized for mobile with 3 in first row, 2 in second row */}
+        <div className="pt-8 flex flex-col items-center gap-4">
+          {/* First row - 3 icons */}
+          <div className="flex justify-center gap-2 md:gap-4">
+            <CertificationIcon 
+              imageSrc="/lovable-uploads/fssc_22000-logo.png" 
+              alt="FSSC 22000 Certification"
+              size="sm"
+              className="md:hidden"
+            />
+            <CertificationIcon 
+              imageSrc="/lovable-uploads/gmp.png" 
+              alt="GMP Certification"
+              size="sm"
+              className="md:hidden"
+            />
+            <CertificationIcon 
+              imageSrc="/lovable-uploads/fssai.webp" 
+              alt="FSSAI Certification"
+              size="sm"
+              className="md:hidden"
+            />
+            
+            {/* Desktop versions (hidden on mobile) */}
+            <CertificationIcon 
+              imageSrc="/lovable-uploads/fssc_22000-logo.png" 
+              alt="FSSC 22000 Certification"
+              size="lg"
+              className="hidden md:flex"
+            />
+            <CertificationIcon 
+              imageSrc="/lovable-uploads/gmp.png" 
+              alt="GMP Certification"
+              size="lg"
+              className="hidden md:flex"
+            />
+            <CertificationIcon 
+              imageSrc="/lovable-uploads/fssai.webp" 
+              alt="FSSAI Certification"
+              size="lg"
+              className="hidden md:flex"
+            />
+          </div>
           
-          <CertificationIcon 
-            imageSrc="/lovable-uploads/fssc_22000-logo.png" 
-            alt="FSSC 22000 Certification"
-            size="lg"
-          />
-          <CertificationIcon 
-            imageSrc="/lovable-uploads/gmp.png" 
-            alt="GMP Certification"
-            size="lg"
-          />
-          <CertificationIcon 
-            imageSrc="/lovable-uploads/fssai.webp" 
-            alt="FSSAI Certification"
-            size="lg"
-          />
-          <CertificationIcon 
-            imageSrc="/lovable-uploads/0fd9b7b7-e731-4f37-b7fe-a5cc7210aae8.png" 
-            alt="ISO 9001:2015 Certification"
-            size="lg"
-          />
-          <CertificationIcon 
-            imageSrc="/lovable-uploads/iso-22000-2018-certification-service-500x500.webp" 
-            alt="ISO 22000:2018 Certification"
-            size="lg"
-          />
+          {/* Second row - 2 icons */}
+          <div className="flex justify-center gap-2 md:gap-4">
+            <CertificationIcon 
+              imageSrc="/lovable-uploads/0fd9b7b7-e731-4f37-b7fe-a5cc7210aae8.png" 
+              alt="ISO 9001:2015 Certification"
+              size="sm"
+              className="md:hidden"
+            />
+            <CertificationIcon 
+              imageSrc="/lovable-uploads/iso-22000-2018-certification-service-500x500.webp" 
+              alt="ISO 22000:2018 Certification"
+              size="sm"
+              className="md:hidden"
+            />
+            
+            {/* Desktop versions (hidden on mobile) */}
+            <CertificationIcon 
+              imageSrc="/lovable-uploads/0fd9b7b7-e731-4f37-b7fe-a5cc7210aae8.png" 
+              alt="ISO 9001:2015 Certification"
+              size="lg"
+              className="hidden md:flex"
+            />
+            <CertificationIcon 
+              imageSrc="/lovable-uploads/iso-22000-2018-certification-service-500x500.webp" 
+              alt="ISO 22000:2018 Certification"
+              size="lg"
+              className="hidden md:flex"
+            />
+          </div>
         </div>
       </motion.div>
     </div>

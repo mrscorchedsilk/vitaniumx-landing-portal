@@ -18,9 +18,9 @@ const CertificationIcon = ({
   delay = 0,
   size = 'md'
 }: CertificationIconProps) => {
-  // Define size classes based on the size prop
+  // Define size classes based on the size prop - make sm smaller for mobile
   const sizeClasses = {
-    sm: "h-12 w-12",
+    sm: "h-10 w-10",
     md: "h-16 w-16",
     lg: "h-20 w-20"
   };

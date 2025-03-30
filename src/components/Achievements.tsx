@@ -33,7 +33,7 @@ const Achievements = () => {
           Achievements & Impact
         </motion.h2>
 
-        <div className={`grid grid-cols-1 ${isMobile ? 'gap-6' : 'grid-cols-2 gap-6'} max-w-3xl mx-auto`}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
           <StatCard 
             number="573M+"
             text="Fortified Meals Delivered"
