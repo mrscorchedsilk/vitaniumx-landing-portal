@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   return (
     <div className="max-container py-5 flex flex-col items-center relative z-10">
-      <Logo />
+      
       
       <motion.div 
         className="mt-8 space-y-6 text-center max-w-3xl"

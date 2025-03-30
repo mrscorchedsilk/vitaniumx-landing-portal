@@ -17,7 +17,7 @@ const Logo = ({ minimal = false }: LogoProps) => {
       <img 
         src="/lovable-uploads/23a708c5-b3da-4d93-b63c-4ee5465679da.png" 
         alt="VitaniumX Logo"
-        className={minimal ? "h-10 md:h-14" : "h-24 md:h-32"} // Smaller size when in navbar
+        className={minimal ? "h-17 md:h-20" : "h-24 md:h-32"} // Smaller size when in navbar
       />
     </motion.div>
   );

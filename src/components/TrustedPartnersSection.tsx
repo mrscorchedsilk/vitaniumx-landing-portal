@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PartnersCarousel from '@/components/ui/PartnersCarousel';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -41,7 +40,12 @@ const TrustedPartnersSection = () => {
     {
       src: "/lovable-uploads/48560100-0f0c-4d33-ae66-12a08fe864b9.png",
       alt: "M.P. AGRO",
+    },
+    {
+      src: "/lovable-uploads/haryana_gov_logo.png",
+      alt: "Government of Haryana",
     }
+    
   ];
 
   return (
@@ -56,7 +60,7 @@ const TrustedPartnersSection = () => {
       
       <div className="max-container relative z-10">
         <motion.div 
-          className="text-center mb-12 glow-white rounded-xl"
+          className="text-center mb-12 rounded-xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -73,36 +77,10 @@ const TrustedPartnersSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="px-4 glow-multi rounded-xl p-4 hover-pop"
+          className="px-4 rounded-xl p-4"
         >
           <PartnersCarousel logos={partnerLogos} />
         </motion.div>
-        
-        {/* Floating particles or dots */}
-        {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(8)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute rounded-full bg-vitablue/20"
-              style={{
-                width: Math.random() * 15 + 5,
-                height: Math.random() * 15 + 5,
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -20, 0],
-                opacity: [0.2, 0.4, 0.2],
-              }}
-              transition={{
-                duration: Math.random() * 3 + 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: Math.random() * 5,
-              }}
-            />
-          ))}
-        </div> */}
       </div>
     </section>
   );
