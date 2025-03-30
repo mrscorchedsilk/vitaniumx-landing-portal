@@ -33,11 +33,17 @@ const Achievements = () => {
           Achievements & Impact
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
           <StatCard 
             number="573M+"
             text="Fortified Meals Delivered"
             delay={200}
+            className="glow-vitablue hover-pop"
+          />
+          <StatCard 
+            number="200k+"
+            text="Sales of our Products"
+            delay={600}
             className="glow-vitablue hover-pop"
           />
           <StatCard 
