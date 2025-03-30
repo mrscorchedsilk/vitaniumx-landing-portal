@@ -30,15 +30,18 @@ const ProductCard = ({
       )}
       style={{ animationDelay: `${delay}ms` }}
     >
-      {icon && <div className="mb-3 md:mb-4">{icon}</div>}
-      
       {imageSrc && (
-        <div className="w-full h-32 md:h-48 mb-3 md:mb-4 overflow-hidden rounded-md">
+        <div className="w-full h-40 md:h-52 mb-3 md:mb-4 overflow-hidden rounded-md relative">
           <img 
             src={imageSrc} 
             alt={title} 
             className="w-full h-full object-cover transition-transform hover:scale-105"
           />
+          {icon && (
+            <div className="absolute top-3 left-3 bg-vitablue/80 rounded-full p-2 shadow-lg">
+              {icon}
+            </div>
+          )}
         </div>
       )}
       
