@@ -17,7 +17,7 @@ const HeroSection = () => {
         >
           <div className="text-left">
             <div className="inline-block glass rounded-full px-5 py-1.5 text-base font-bold text-gradient mb-6 shadow-[0_0_10px_rgba(0,100,255,0.5)]">
-              OUR MANUFACTURING
+              India's Premier Micronutrient Partner
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight">
