@@ -50,7 +50,7 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="bg-white/50 border-white/20"
+          className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none"
         />
       </div>
       
@@ -62,7 +62,7 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="bg-white/50 border-white/20"
+          className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none"
         />
       </div>
       
@@ -73,7 +73,7 @@ const ContactForm = () => {
           value={formData.company}
           onChange={handleChange}
           required
-          className="bg-white/50 border-white/20"
+          className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none"
         />
       </div>
       
@@ -84,7 +84,7 @@ const ContactForm = () => {
           value={formData.phone}
           onChange={handleChange}
           required
-          className="bg-white/50 border-white/20"
+          className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none"
         />
       </div>
       
@@ -94,7 +94,7 @@ const ContactForm = () => {
           placeholder="Tell us about your requirements..."
           value={formData.message}
           onChange={handleChange}
-          className="bg-white/50 border-white/20 resize-none h-24"
+          className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none resize-none h-24"
         />
       </div>
       

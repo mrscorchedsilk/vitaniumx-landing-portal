@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ContactForm from '@/components/ContactForm';
 import { motion } from 'framer-motion';
@@ -8,10 +7,16 @@ import { useIsMobile } from '@/hooks/use-mobile';
 const HeroSection = () => {
   const isMobile = useIsMobile();
   
+  const scrollToContactForm = () => {
+    const contactForm = document.querySelector('.contact-form-section');
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
+    <div id="contact" className="contact-form-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        {/* Left side - Hero content - Now displayed first on mobile */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -61,12 +66,14 @@ const HeroSection = () => {
             </ul>
             
             <div className="mt-8">
-              <button className="w-full md:w-auto bg-[#1EAEDB] hover:bg-[#1a9ac3] text-white font-medium py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg hover-pop">
+              <button 
+                className="w-full md:w-auto bg-[#1EAEDB] hover:bg-[#1a9ac3] text-white font-medium py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg hover-pop"
+                onClick={scrollToContactForm}
+              >
                 REQUEST FOR CALL BACK
               </button>
             </div>
             
-            {/* Certification Icons Section with Floating Effect */}
             <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
               {isMobile ? (
                 <div className="flex flex-col items-center w-full">
@@ -153,7 +160,6 @@ const HeroSection = () => {
           </div>
         </motion.div>
         
-        {/* Right side - Form - Now displayed second on mobile */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}

@@ -4,6 +4,17 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
 const CallToAction = () => {
+  const scrollToContactForm = () => {
+    // Find the contact form element and scroll to it
+    const contactForm = document.querySelector('.contact-form-section');
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If we're on a different page, redirect to home page with #contact fragment
+      window.location.href = '/#contact';
+    }
+  };
+
   return (
     <section className="section-padding bg-transparent relative overflow-hidden">
       {/* Animated background glow */}
@@ -50,7 +61,10 @@ const CallToAction = () => {
             transition={{ duration: 0.5, delay: 0.7 }}
             viewport={{ once: true }}
           >
-            <Button className="w-full md:w-auto btn-primary relative group overflow-hidden glow-vitablue hover-pop-sm">
+            <Button 
+              className="w-full md:w-auto btn-primary relative group overflow-hidden glow-vitablue hover-pop-sm"
+              onClick={scrollToContactForm}
+            >
               <span className="relative z-10">Request a Consultation</span>
               <span className="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
             </Button>

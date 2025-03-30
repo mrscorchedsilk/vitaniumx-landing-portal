@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Logo from '@/components/Logo';
 import CertificationIcon from '@/components/CertificationIcon';
@@ -7,9 +6,19 @@ import { PhoneCall } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
+  const scrollToContactForm = () => {
+    // Find the contact form element and scroll to it
+    const contactForm = document.querySelector('.contact-form-section');
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If we're on a different page, redirect to home page with #contact fragment
+      window.location.href = '/#contact';
+    }
+  };
+
   return (
     <div className="max-container py-5 flex flex-col items-center relative z-10">
-      
       
       <motion.div 
         className="mt-8 space-y-6 text-center max-w-3xl"
@@ -38,14 +47,18 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <Button 
+            onClick={scrollToContactForm}
             className="w-full max-w-md mx-auto text-lg font-bold bg-[#3AB7FA] hover:bg-[#2a9de6] text-white shadow-[0_0_15px_rgba(58,183,250,0.5)]" 
             size="lg">
             <PhoneCall className="mr-2 h-5 w-5" />
             Get a Call
           </Button>
-          <Button 
-            className="w-full max-w-md mx-auto text-lg font-bold bg-green-500 hover:bg-green-600 text-white shadow-[0_0_15px_rgba(37,211,102,0.5)]"
-            size="lg">
+          <a 
+            href="https://api.whatsapp.com/send?phone=919876543210" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full max-w-md mx-auto text-lg font-bold bg-green-500 hover:bg-green-600 text-white shadow-[0_0_15px_rgba(37,211,102,0.5)] inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md h-11 px-8"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -61,7 +74,7 @@ const Hero = () => {
               />
             </svg>
             Connect on WhatsApp
-          </Button>
+          </a>
         </motion.div>
 
         {/* Certification Icons Section - Reorganized for mobile with 3 in first row, 2 in second row */}

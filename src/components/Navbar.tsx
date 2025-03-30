@@ -29,14 +29,16 @@ const Navbar = () => {
               Call
             </a>
           ) : (
-            <Button 
-              className="bg-[#3AB7FA] hover:bg-[#2a9de6] text-white shadow-[0_0_15px_rgba(58,183,250,0.5)] w-full md:w-auto"
-              size="sm"
+            <a 
+              href="https://api.whatsapp.com/send?phone=919876543210" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#3AB7FA] hover:bg-[#2a9de6] text-white shadow-[0_0_15px_rgba(58,183,250,0.5)] inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-3"
             >
               <Phone className="mr-2 h-4 w-4" />
               <span className="hidden md:inline">+91 98765 43210</span>
               <span className="md:hidden">Call</span>
-            </Button>
+            </a>
           )}
           
           <BookingCalendar />

@@ -39,7 +39,7 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
             value={formData.firstName}
             onChange={handleChange}
             required
-            className="hover:border-vitablue focus:glow-vitablue"
+            className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue"
           />
         </div>
         <div>
@@ -53,7 +53,7 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
             value={formData.lastName}
             onChange={handleChange}
             required
-            className="hover:border-vitablue focus:glow-vitablue"
+            className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue"
           />
         </div>
       </div>
@@ -70,7 +70,7 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
             value={formData.email}
             onChange={handleChange}
             required
-            className="hover:border-vitablue focus:glow-vitablue"
+            className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue"
           />
         </div>
         <div>
@@ -84,7 +84,7 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
             value={formData.phone}
             onChange={handleChange}
             required
-            className="hover:border-vitablue focus:glow-vitablue"
+            className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue"
           />
         </div>
       </div>
@@ -100,7 +100,7 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
           value={formData.company}
           onChange={handleChange}
           required
-          className="hover:border-vitablue focus:glow-vitablue"
+          className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue"
         />
       </div>
 
@@ -114,7 +114,7 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
           value={formData.productInterest}
           onChange={handleChange}
           required
-          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus:glow-vitablue transition-all duration-300 hover:border-vitablue disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+          className="flex h-10 w-full rounded-md border-2 border-blue-200/50 bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus:border-[#1EAEDB]/70 focus:glow-vitablue transition-all duration-300 hover:border-vitablue disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
         >
           <option value="">Select a product category</option>
           <option value="staple">Micronutrient Premixes</option>
@@ -136,7 +136,7 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
           name="volume"
           value={formData.volume}
           onChange={handleChange}
-          className="hover:border-vitablue focus:glow-vitablue"
+          className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue"
         />
       </div>
 
@@ -151,7 +151,7 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
           onChange={handleChange}
           rows={5}
           required
-          className="hover:border-vitablue focus:glow-vitablue"
+          className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue"
           placeholder="Please describe your specific requirements, including the type of food you want to fortify, target nutrients, etc."
         />
       </div>
