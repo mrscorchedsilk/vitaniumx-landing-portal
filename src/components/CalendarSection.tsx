@@ -26,7 +26,7 @@ const CalendarSection = () => {
         </motion.div>
         
         <motion.div 
-          className="glass-card max-w-4xl mx-auto p-6 md:p-8"
+          className="glass-card max-w-5xl mx-auto p-6 md:p-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
