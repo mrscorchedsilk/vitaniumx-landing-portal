@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ContactForm from '@/components/ContactForm';
 import { motion } from 'framer-motion';
@@ -166,8 +167,9 @@ const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="order-2 lg:order-2"
         >
-          <ContactForm />
-          
+          <div className="glass-card glow-vitablue hover-pop-sm rounded-xl">
+            <ContactForm />
+          </div>
         </motion.div>
       </div>
     </div>
