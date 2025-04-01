@@ -17,7 +17,7 @@ const CalendarSection = () => {
         >
           <SectionHeading 
             title="Schedule a Consultation" 
-            subtitle="Book a time that works for you" 
+            description="Book a time that works for you" 
           />
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
             Our team is ready to discuss your micronutrient requirements. Choose a convenient time slot,
