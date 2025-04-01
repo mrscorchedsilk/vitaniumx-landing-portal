@@ -166,9 +166,8 @@ const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="order-2 lg:order-2"
         >
-          <div className="bg-white/90 backdrop-blur-sm p-4 md:p-8 rounded-xl shadow-lg border border-white/30 glow-vitablue hover:shadow-xl transition-all duration-300">
-            <ContactForm />
-          </div>
+          <ContactForm />
+          
         </motion.div>
       </div>
     </div>
