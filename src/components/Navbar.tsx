@@ -2,13 +2,21 @@
 import React from 'react';
 import Logo from '@/components/Logo';
 import { Button } from '@/components/ui/button';
-import { Phone } from 'lucide-react';
+import { Phone, Calendar } from 'lucide-react';
 import { motion } from 'framer-motion';
-import BookingCalendar from '@/components/BookingCalendar';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Navbar = () => {
   const isMobile = useIsMobile();
+  
+  const scrollToCalendarSection = () => {
+    const calendarSection = document.getElementById('calendar');
+    if (calendarSection) {
+      calendarSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = '/#calendar';
+    }
+  };
   
   return (
     <header className="py-2 md:py-4 px-3 md:px-5 bg-white/20 backdrop-blur-md fixed w-full top-0 z-50 glass">
@@ -41,7 +49,14 @@ const Navbar = () => {
             </a>
           )}
           
-          <BookingCalendar />
+          <Button 
+            className="bg-green-500 hover:bg-green-600 text-white shadow-[0_0_15px_rgba(37,211,102,0.5)] w-full md:w-auto"
+            size="sm"
+            onClick={scrollToCalendarSection}
+          >
+            <Calendar className="mr-2 h-4 w-4" />
+            <span>Schedule a call</span>
+          </Button>
         </div>
       </div>
     </header>

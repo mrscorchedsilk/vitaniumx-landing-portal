@@ -9,6 +9,7 @@ import PartnershipSection from '@/components/PartnershipSection';
 import PartnershipSection2 from '@/components/PartnershipSection2';
 import ProductsSection from '@/components/ProductsSection';
 import CallToAction from '@/components/CallToAction';
+import CalendarSection from '@/components/CalendarSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -42,6 +43,9 @@ const Index = () => {
 
         {/* CTA Section */}
         <CallToAction />
+        
+        {/* Calendar Section - New */}
+        <CalendarSection />
 
         {/* Footer */}
         <Footer />
