@@ -40,11 +40,11 @@ const CallToAction = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            Transform Your Manufacturing Impact
+            TRANSFORM YOUR MANUFACTURING IMPACT
           </motion.h2>
           
           <motion.p 
-            className="my-4 md:my-6 text-sm md:text-base text-gray-600 relative z-10"
+            className="my-4 md:my-6 text-sm md:text-base text-gray-600 relative z-10 font-bold"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}

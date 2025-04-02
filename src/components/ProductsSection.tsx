@@ -87,7 +87,7 @@ const ProductsSection = () => {
         </div>
         
         {/* Floating particles */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(10)].map((_, i) => (
             <motion.div
               key={i}
@@ -111,7 +111,7 @@ const ProductsSection = () => {
               }}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
