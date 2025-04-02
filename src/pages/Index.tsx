@@ -49,7 +49,9 @@ const Index = () => {
         <CallToAction />
         
         {/* Calendar Section - New */}
-        <CalendarSection />
+        <section className="contact-form-section">
+          <CalendarSection />
+        </section>
 
         {/* Footer */}
         <Footer />

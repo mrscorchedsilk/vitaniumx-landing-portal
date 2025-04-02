@@ -10,6 +10,14 @@ import { useIsMobile } from '@/hooks/use-mobile';
 const PartnershipSection2 = () => {
   const isMobile = useIsMobile();
   
+  const scrollToContactForm = () => {
+    // Find the contact form element and scroll to it
+    const contactForm = document.querySelector('.contact-form-section');
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <section className="section-padding bg-transparent relative overflow-hidden">
       {/* Animated background glow */}
@@ -94,7 +102,10 @@ const PartnershipSection2 = () => {
                 transition={{ duration: 0.5, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                <Button className="w-full md:w-auto bg-vitablue hover:bg-blue-600 text-white relative group overflow-hidden glow-vitablue hover-pop-sm">
+                <Button 
+                  className="w-full md:w-auto bg-vitablue hover:bg-blue-600 text-white relative group overflow-hidden glow-vitablue hover-pop-sm"
+                  onClick={scrollToContactForm}
+                >
                   <span className="relative z-10">REQUEST FOR CALL BACK</span>
                   <span className="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                 </Button>

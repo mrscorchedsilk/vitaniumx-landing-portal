@@ -6,6 +6,14 @@ import { PhoneIcon, MessageSquareIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const PartnershipSection = () => {
+  const scrollToContactForm = () => {
+    // Find the contact form element and scroll to it
+    const contactForm = document.querySelector('.contact-form-section');
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="section-padding bg-transparent relative overflow-hidden">
       {/* Animated background glow */}
@@ -102,13 +110,14 @@ const PartnershipSection = () => {
                 transition={{ duration: 0.5, delay: 0.9 }}
                 viewport={{ once: true }}
               >
-                <Button className="bg-vitablue hover:bg-blue-600 text-white relative group overflow-hidden glow-vitablue hover-pop-sm">
+                <Button 
+                  className="bg-vitablue hover:bg-blue-600 text-white relative group overflow-hidden glow-vitablue hover-pop-sm"
+                  onClick={scrollToContactForm}
+                >
                   <span className="relative z-10">REQUEST FOR CALL BACK</span>
                   <span className="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                 </Button>
-
               </motion.div>
-              
             </div>
           </ScrollReveal>
         </div>
