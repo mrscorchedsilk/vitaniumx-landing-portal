@@ -4,6 +4,8 @@ import ContactForm from '@/components/ContactForm';
 import { motion } from 'framer-motion';
 import FloatingCertificationLogo from './ui/FloatingCertificationLogo';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { Phone, MessageCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   const isMobile = useIsMobile();
@@ -66,13 +68,49 @@ const HeroSection = () => {
               </li>
             </ul>
             
-            <div className="mt-8">
-              <button 
-                className="w-full md:w-auto bg-[#1EAEDB] hover:bg-[#1a9ac3] text-white font-medium py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg hover-pop"
-                onClick={scrollToContactForm}
+            <div className="mt-8 flex flex-col md:flex-row gap-4">
+              {isMobile ? (
+                <a 
+                  href="tel:+919429694121"
+                  className="bg-[#3AB7FA] hover:bg-[#2a9de6] text-white shadow-[0_0_15px_rgba(58,183,250,0.5)] inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-11 px-8 w-full"
+                >
+                  <Phone className="h-5 w-5" />
+                  <span>+91 9429694121</span>
+                </a>
+              ) : (
+                <a 
+                  href="https://api.whatsapp.com/send?phone=919429694121"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#3AB7FA] hover:bg-[#2a9de6] text-white shadow-[0_0_15px_rgba(58,183,250,0.5)] inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-11 px-8"
+                >
+                  <Phone className="h-5 w-5" />
+                  <span>+91 9429694121</span>
+                </a>
+              )}
+              
+              <a 
+                href="https://api.whatsapp.com/send?phone=919429694121"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-500 hover:bg-green-600 text-white shadow-[0_0_15px_rgba(37,211,102,0.5)] inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-11 px-8 w-full md:w-auto"
               >
-                REQUEST FOR CALL BACK
-              </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-5 w-5"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M20.463 3.488C18.217 1.24 15.231 0 12.05 0 5.495 0 0.16 5.334 0.157 11.892c0 2.096.546 4.142 1.588 5.946L0 24l6.304-1.654a11.9 11.9 0 005.684 1.448h.005c6.554 0 11.89-5.335 11.894-11.893 0-3.18-1.24-6.165-3.493-8.413zm-8.413 18.317h-.004a9.89 9.89 0 01-5.042-1.38l-.36-.214-3.733.979.996-3.648-.236-.375a9.859 9.859 0 01-1.51-5.276c.002-5.45 4.437-9.884 9.893-9.884 2.641 0 5.124 1.03 6.991 2.898a9.84 9.84 0 012.898 6.994c-.003 5.45-4.437 9.886-9.893 9.886zm5.424-7.403c-.299-.149-1.765-.87-2.037-.967-.272-.099-.47-.148-.669.148-.198.298-.767.967-.94 1.164-.173.198-.345.223-.644.075-.299-.15-1.261-.465-2.402-1.483-.888-.792-1.487-1.77-1.66-2.069-.173-.298-.019-.458.13-.606.134-.133.297-.347.446-.52.148-.174.197-.298.297-.497.1-.199.05-.372-.025-.522-.075-.149-.67-1.612-.917-2.207-.241-.578-.487-.5-.67-.51-.172-.01-.37-.012-.569-.012-.198 0-.52.075-.793.373s-1.04 1.016-1.04 2.479c0 1.462 1.064 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.489.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.57-.085 1.758-.719 2.006-1.413.247-.695.247-1.29.173-1.414-.074-.124-.273-.198-.572-.347z"
+                  />
+                </svg>
+                <span>WhatsApp</span>
+              </a>
             </div>
             
             {/* Updated certification logos section - single row for web, consistent mobile sizing */}
