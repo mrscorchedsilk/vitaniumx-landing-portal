@@ -69,7 +69,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="glass-form space-y-4 animate-fade-in">
+    <form onSubmit={handleSubmit} className="glass-form glass-card glow-vitablue hover-pop-sm rounded-xl space-y-4 animate-fade-in">
       <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4 text-center md:text-left">Inquire About Micronutrient Premixes</h3>
       
       <div>
@@ -139,7 +139,7 @@ const ContactForm = () => {
       >
         {isSubmitting ? 'Submitting...' : 'Discuss Your Requirements'}
       </Button>
-    </form>
+        </form>
   );
 };
 

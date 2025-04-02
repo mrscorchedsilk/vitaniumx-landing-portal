@@ -167,9 +167,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="order-2 lg:order-2"
         >
-          <div className="glass-card glow-vitablue hover-pop-sm rounded-xl">
-            <ContactForm />
-          </div>
+          <ContactForm />
         </motion.div>
       </div>
     </div>
