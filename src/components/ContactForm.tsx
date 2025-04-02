@@ -29,12 +29,21 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch(WEBHOOK_URL, {
+      // Convert form data to URLSearchParams (query parameters)
+      const params = new URLSearchParams({
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        phone_number: formData.phone, // Match the parameter name from the Python example
+        requirements: formData.message, // Match the parameter name from the Python example
+      });
+      
+      // Construct the URL with query parameters
+      const url = `${WEBHOOK_URL}?${params.toString()}`;
+      
+      // Send the POST request with empty body, data is in URL
+      const response = await fetch(url, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
       });
       
       if (response.ok) {
