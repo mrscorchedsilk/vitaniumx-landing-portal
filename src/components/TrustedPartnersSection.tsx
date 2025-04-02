@@ -31,7 +31,7 @@ const TrustedPartnersSection = () => {
       alt: "RAUSHEENA GROUP",
     },
     {
-      src: "/lovable-uploads/d005b3a7-c25a-4e07-a213-52eb3ffa7836.png",
+      src: "/lovable-uploads/Shree Lal i Logo.png",
       alt: "SHREE LALJI ENERGY FOODS PVT LTD",
     },
     {
