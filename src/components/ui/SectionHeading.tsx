@@ -3,6 +3,7 @@ import React from 'react';
 
 interface SectionHeadingProps {
   title: string;
+  subtitle?: string;
   description?: string;
   align?: 'left' | 'center' | 'right';
   titleSize?: 'sm' | 'md' | 'lg';
@@ -10,6 +11,7 @@ interface SectionHeadingProps {
 
 const SectionHeading = ({ 
   title, 
+  subtitle,
   description, 
   align = 'center',
   titleSize = 'lg'
@@ -28,6 +30,11 @@ const SectionHeading = ({
 
   return (
     <div className={`mb-8 ${alignClass[align]}`}>
+      {subtitle && (
+        <p className="text-sm uppercase tracking-wider text-gray-500 font-medium mb-2">
+          {subtitle}
+        </p>
+      )}
       <h2 className={`font-bold ${titleSizeClass[titleSize]}`}>
         <span className="text-gradient">{title}</span>
       </h2>
