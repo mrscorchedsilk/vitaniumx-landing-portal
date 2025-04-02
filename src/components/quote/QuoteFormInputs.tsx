@@ -27,9 +27,9 @@ interface QuoteFormInputsProps {
 export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, handleChange }) => {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
         <div>
-          <label htmlFor="firstName" className="block text-sm font-medium text-neutral-700 mb-1">
+          <label htmlFor="firstName" className="block text-sm font-medium text-neutral-700 mb-2">
             First Name*
           </label>
           <Input
@@ -39,11 +39,11 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
             value={formData.firstName}
             onChange={handleChange}
             required
-            className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue"
+            className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue h-12"
           />
         </div>
         <div>
-          <label htmlFor="lastName" className="block text-sm font-medium text-neutral-700 mb-1">
+          <label htmlFor="lastName" className="block text-sm font-medium text-neutral-700 mb-2">
             Last Name*
           </label>
           <Input
@@ -53,14 +53,14 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
             value={formData.lastName}
             onChange={handleChange}
             required
-            className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue"
+            className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue h-12"
           />
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-1">
+          <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">
             Email Address*
           </label>
           <Input
@@ -70,11 +70,11 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
             value={formData.email}
             onChange={handleChange}
             required
-            className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue"
+            className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue h-12"
           />
         </div>
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-neutral-700 mb-1">
+          <label htmlFor="phone" className="block text-sm font-medium text-neutral-700 mb-2">
             Phone Number*
           </label>
           <Input
@@ -84,13 +84,13 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
             value={formData.phone}
             onChange={handleChange}
             required
-            className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue"
+            className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue h-12"
           />
         </div>
       </div>
 
-      <div className="mb-4 md:mb-6">
-        <label htmlFor="company" className="block text-sm font-medium text-neutral-700 mb-1">
+      <div className="mb-6 md:mb-8">
+        <label htmlFor="company" className="block text-sm font-medium text-neutral-700 mb-2">
           Company Name*
         </label>
         <Input
@@ -100,12 +100,12 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
           value={formData.company}
           onChange={handleChange}
           required
-          className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue"
+          className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue h-12"
         />
       </div>
 
-      <div className="mb-4 md:mb-6">
-        <label htmlFor="productInterest" className="block text-sm font-medium text-neutral-700 mb-1">
+      <div className="mb-6 md:mb-8">
+        <label htmlFor="productInterest" className="block text-sm font-medium text-neutral-700 mb-2">
           Product Interest*
         </label>
         <select
@@ -114,7 +114,7 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
           value={formData.productInterest}
           onChange={handleChange}
           required
-          className="flex h-10 w-full rounded-md border-2 border-blue-200/50 bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus:border-[#1EAEDB]/70 focus:glow-vitablue transition-all duration-300 hover:border-vitablue disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+          className="flex h-12 w-full rounded-md border-2 border-blue-200/50 bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus:border-[#1EAEDB]/70 focus:glow-vitablue transition-all duration-300 hover:border-vitablue disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
         >
           <option value="">Select a product category</option>
           <option value="staple">Micronutrient Premixes</option>
@@ -126,8 +126,8 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
         </select>
       </div>
 
-      <div className="mb-4 md:mb-6">
-        <label htmlFor="volume" className="block text-sm font-medium text-neutral-700 mb-1">
+      <div className="mb-6 md:mb-8">
+        <label htmlFor="volume" className="block text-sm font-medium text-neutral-700 mb-2">
           Estimated Volume (Tonnes/Month)
         </label>
         <Input
@@ -136,12 +136,12 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
           name="volume"
           value={formData.volume}
           onChange={handleChange}
-          className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue"
+          className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue h-12"
         />
       </div>
 
-      <div className="mb-4 md:mb-6">
-        <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-1">
+      <div className="mb-6 md:mb-8">
+        <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-2">
           Message & Requirements*
         </label>
         <Textarea
@@ -149,14 +149,14 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
           name="message"
           value={formData.message}
           onChange={handleChange}
-          rows={5}
+          rows={7}
           required
-          className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue"
+          className="border-2 border-blue-200/50 hover:border-vitablue focus:border-[#1EAEDB]/70 focus:glow-vitablue min-h-[120px]"
           placeholder="Please describe your specific requirements, including the type of food you want to fortify, target nutrients, etc."
         />
       </div>
 
-      <div className="mb-6 md:mb-8">
+      <div className="mb-8 md:mb-10">
         <label className="flex items-start">
           <input
             type="checkbox"
@@ -164,7 +164,7 @@ export const QuoteFormInputs: React.FC<QuoteFormInputsProps> = ({ formData, hand
             checked={formData.consent}
             onChange={handleChange}
             required
-            className="mt-1 mr-3 focus:ring-2 focus:ring-vitablue cursor-pointer"
+            className="mt-1 mr-3 h-5 w-5 focus:ring-2 focus:ring-vitablue cursor-pointer"
           />
           <span className="text-xs md:text-sm text-neutral-600">
             I consent to VitaniumX collecting and processing my personal data for the purpose of providing me with a quote. 

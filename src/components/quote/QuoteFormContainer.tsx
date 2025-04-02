@@ -1,3 +1,4 @@
+
 import React, { useState, FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
 import { QuoteFormInputs } from './QuoteFormInputs';
@@ -78,7 +79,7 @@ export const QuoteFormContainer = () => {
 
           <Button
             type="submit"
-            className="bg-vitablue hover:bg-vitablue-dark w-full py-5 md:py-7 text-white font-medium hover:shadow-lg transition-all duration-300 hover-pop glow-vitablue"
+            className="bg-vitablue hover:bg-vitablue-dark w-full py-6 md:py-7 text-white font-medium hover:shadow-lg transition-all duration-300 hover-pop glow-vitablue text-lg"
           >
             Submit Quote Request
           </Button>

@@ -75,78 +75,76 @@ const HeroSection = () => {
               </button>
             </div>
             
-            {/* Updated certification logos section - just floating logos */}
+            {/* Updated certification logos section - single row for web, consistent mobile sizing */}
             <div className="mt-12">
               <div className="mb-4 font-semibold text-gray-700">Certified By:</div>
-              <div className="flex flex-wrap justify-start items-center gap-3 md:gap-6 w-full">
-                {isMobile ? (
-                  <div className="flex gap-3 justify-between w-full">
-                    <FloatingCertificationLogo 
-                      src="/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
-                      alt="GMP Certified" 
-                      size="md" 
-                      delay={0.5}
-                    />
-                    <FloatingCertificationLogo 
-                      src="/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
-                      alt="FSSAI Certified" 
-                      size="md" 
-                      delay={1}
-                    />
-                    <FloatingCertificationLogo 
-                      src="/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
-                      alt="ISO 9001:2015 Certified" 
-                      size="md" 
-                      delay={1.5}
-                    />
-                    <FloatingCertificationLogo 
-                      src="/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
-                      alt="FSSC 22000 Certified" 
-                      size="md"
-                      delay={0} 
-                    />
-                    <FloatingCertificationLogo 
-                      src="/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
-                      alt="ISO 22000:2018 Certified" 
-                      size="md" 
-                      delay={2}
-                    />
-                  </div>
-                ) : (
-                  <div className="flex gap-8 flex-wrap">
-                    <FloatingCertificationLogo 
-                      src="/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
-                      alt="GMP Certified" 
-                      size="lg" 
-                      delay={0.5}
-                    />
-                    <FloatingCertificationLogo 
-                      src="/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
-                      alt="FSSAI Certified" 
-                      size="lg" 
-                      delay={1}
-                    />
-                    <FloatingCertificationLogo 
-                      src="/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
-                      alt="ISO 9001:2015 Certified" 
-                      size="lg" 
-                      delay={1.5}
-                    />
-                    <FloatingCertificationLogo 
-                      src="/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
-                      alt="FSSC 22000 Certified" 
-                      size="lg"
-                      delay={0} 
-                    />
-                    <FloatingCertificationLogo 
-                      src="/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
-                      alt="ISO 22000:2018 Certified" 
-                      size="lg" 
-                      delay={2}
-                    />
-                  </div>
-                )}
-              </div>
+              {isMobile ? (
+                <div className="grid grid-cols-5 gap-2 w-full">
+                  <FloatingCertificationLogo 
+                    src="/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
+                    alt="GMP Certified" 
+                    size="md" 
+                    delay={0.5}
+                  />
+                  <FloatingCertificationLogo 
+                    src="/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
+                    alt="FSSAI Certified" 
+                    size="md" 
+                    delay={1}
+                  />
+                  <FloatingCertificationLogo 
+                    src="/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
+                    alt="ISO 9001:2015 Certified" 
+                    size="md" 
+                    delay={1.5}
+                  />
+                  <FloatingCertificationLogo 
+                    src="/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
+                    alt="FSSC 22000 Certified" 
+                    size="md"
+                    delay={0} 
+                  />
+                  <FloatingCertificationLogo 
+                    src="/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
+                    alt="ISO 22000:2018 Certified" 
+                    size="md" 
+                    delay={2}
+                  />
+                </div>
+              ) : (
+                <div className="flex items-center justify-between gap-4 w-full">
+                  <FloatingCertificationLogo 
+                    src="/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
+                    alt="GMP Certified" 
+                    size="lg" 
+                    delay={0.5}
+                  />
+                  <FloatingCertificationLogo 
+                    src="/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
+                    alt="FSSAI Certified" 
+                    size="lg" 
+                    delay={1}
+                  />
+                  <FloatingCertificationLogo 
+                    src="/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
+                    alt="ISO 9001:2015 Certified" 
+                    size="lg" 
+                    delay={1.5}
+                  />
+                  <FloatingCertificationLogo 
+                    src="/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
+                    alt="FSSC 22000 Certified" 
+                    size="lg"
+                    delay={0} 
+                  />
+                  <FloatingCertificationLogo 
+                    src="/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
+                    alt="ISO 22000:2018 Certified" 
+                    size="lg" 
+                    delay={2}
+                  />
+                </div>
+              )}
             </div>
           </div>
         </motion.div>
