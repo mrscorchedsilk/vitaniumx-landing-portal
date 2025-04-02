@@ -1,50 +1,74 @@
 
 import React from 'react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { cn } from '@/lib/utils';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 interface PartnerLogo {
   src: string;
   alt: string;
+  width?: number;
+  height?: number;
 }
 
 interface PartnersCarouselProps {
   logos: PartnerLogo[];
+  className?: string;
 }
 
-const PartnersCarousel = ({ logos }: PartnersCarouselProps) => {
+const PartnersCarousel = ({ logos, className }: PartnersCarouselProps) => {
+  // Duplicate logos to create a seamless loop effect
+  const extendedLogos = [...logos, ...logos];
+  
+  const autoplayOptions = React.useMemo(() => 
+    Autoplay({
+      delay: 1000,
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
+    }), 
+    []
+  );
+  
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { 
+      loop: true,
+      align: "start",
+      slidesToScroll: 1,
+      skipSnaps: false,
+      dragFree: true,
+    },
+    [autoplayOptions]
+  );
+
   return (
-    <Carousel
-      opts={{
-        align: "start",
-        loop: true,
-      }}
-      className="w-full max-w-6xl mx-auto"
-    >
-      <CarouselContent className="py-4">
-        {logos.map((logo, index) => (
-          <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4 pl-4">
-            <div className="glass-card h-40 flex items-center justify-center p-4 hover-pop-sm">
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className="max-h-24 max-w-full object-contain"
-              />
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <div className="flex justify-center gap-2 mt-4">
-        <CarouselPrevious className="relative static left-auto transform-none mx-2" />
-        <CarouselNext className="relative static right-auto transform-none mx-2" />
+    <div className={cn("w-full overflow-hidden", className)}>
+      <div className="relative">
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex">
+            {extendedLogos.map((logo, index) => (
+              <div 
+                key={index} 
+                className="flex-[0_0_50%] sm:flex-[0_0_33.33%] md:flex-[0_0_25%] lg:flex-[0_0_20%] xl:flex-[0_0_16.666%] min-w-0 pl-2"
+              >
+                <div
+                  className="p-2 bg-white/80 backdrop-blur-sm rounded-lg border border-gray-100 flex items-center justify-center h-32
+                           shadow-[0_10px_20px_-5px_rgba(139,92,246,0.15)] transition-all duration-300
+                           hover:shadow-[0_15px_30px_-5px_rgba(139,92,246,0.25)] hover:scale-105"
+                >
+                  <img 
+                    src={logo.src} 
+                    alt={logo.alt} 
+                    className="max-h-24 max-w-full object-contain" 
+                    width={logo.width || 'auto'} 
+                    height={logo.height || 'auto'} 
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-    </Carousel>
+    </div>
   );
 };
 
