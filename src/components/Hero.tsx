@@ -78,67 +78,78 @@ const Hero = () => {
           </a>
         </motion.div>
 
-        {/* Certification Icons Section - Updated to show all 5 icons in a single row for mobile */}
-        <div className="pt-8">
-          {/* Mobile View - Single row with all 5 icons */}
-          <div className="flex justify-center gap-2.5 md:hidden">
+        {/* Certification heading and logos section */}
+        <div className="pt-10">
+          <div className="mb-4 font-semibold text-gray-700 text-center">Certified By:</div>
+          {/* Mobile View - Larger icons in a single row with more spacing */}
+          <div className="flex justify-between gap-1 md:hidden">
             <CertificationIcon 
-              imageSrc="/lovable-uploads/fssc_22000-logo.png" 
-              alt="FSSC 22000 Certification"
-              size="xs" 
-            />
-            <CertificationIcon 
-              imageSrc="/lovable-uploads/gmp.png" 
+              imageSrc="/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
               alt="GMP Certification"
-              size="sm"
+              size="sm" 
+              className="bg-transparent border-0 shadow-none"
             />
             <CertificationIcon 
-              imageSrc="/lovable-uploads/fssai.webp" 
+              imageSrc="/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
               alt="FSSAI Certification"
               size="sm"
+              className="bg-transparent border-0 shadow-none"
             />
             <CertificationIcon 
-              imageSrc="/lovable-uploads/0fd9b7b7-e731-4f37-b7fe-a5cc7210aae8.png" 
+              imageSrc="/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
               alt="ISO 9001:2015 Certification"
               size="sm"
+              className="bg-transparent border-0 shadow-none"
             />
             <CertificationIcon 
-              imageSrc="/lovable-uploads/iso-22000-2018-certification-service-500x500.webp" 
+              imageSrc="/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
+              alt="FSSC 22000 Certification"
+              size="sm"
+              className="bg-transparent border-0 shadow-none"
+            />
+            <CertificationIcon 
+              imageSrc="/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
               alt="ISO 22000:2018 Certification"
               size="sm"
+              className="bg-transparent border-0 shadow-none"
             />
           </div>
           
-          {/* Desktop View - Still in two rows for better spacing */}
+          {/* Desktop View - No backgrounds, just floating logos */}
           <div className="hidden md:block">
-            <div className="flex justify-center gap-4 mb-4">
+            <div className="flex justify-center gap-8 mb-4">
               <CertificationIcon 
-                imageSrc="/lovable-uploads/fssc_22000-logo.png" 
-                alt="FSSC 22000 Certification"
-                size="md" 
-              />
-              <CertificationIcon 
-                imageSrc="/lovable-uploads/gmp.png" 
+                imageSrc="/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
                 alt="GMP Certification"
-                size="lg"
+                size="md" 
+                className="bg-transparent border-0 shadow-none"
               />
               <CertificationIcon 
-                imageSrc="/lovable-uploads/fssai.webp" 
+                imageSrc="/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
                 alt="FSSAI Certification"
                 size="lg"
+                className="bg-transparent border-0 shadow-none"
+              />
+              <CertificationIcon 
+                imageSrc="/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
+                alt="ISO 9001:2015 Certification"
+                size="lg"
+                className="bg-transparent border-0 shadow-none"
               />
             </div>
             
-            <div className="flex justify-center gap-4">
+            <div className="flex justify-center gap-8">
               <CertificationIcon 
-                imageSrc="/lovable-uploads/0fd9b7b7-e731-4f37-b7fe-a5cc7210aae8.png" 
-                alt="ISO 9001:2015 Certification"
-                size="lg"
+                imageSrc="/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
+                alt="FSSC 22000 Certification"
+                size="md"
+                className="bg-transparent border-0 shadow-none"
               />
               <CertificationIcon 
-                imageSrc="/lovable-uploads/iso-22000-2018-certification-service-500x500.webp" 
+                imageSrc="/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
                 alt="ISO 22000:2018 Certification"
                 size="lg"
+                className="bg-transparent border-0 shadow-none"
               />
             </div>
           </div>

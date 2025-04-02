@@ -18,10 +18,10 @@ const CertificationIcon = ({
   delay = 0,
   size = 'md'
 }: CertificationIconProps) => {
-  // Define size classes based on the size prop - make sm smaller for mobile
+  // Define size classes based on the size prop - make sm larger for mobile
   const sizeClasses = {
-    xs: "h-8 w-8",
-    sm: "h-10 w-10",
+    xs: "h-12 w-12",
+    sm: "h-14 w-14",
     md: "h-16 w-16",
     lg: "h-20 w-20"
   };
@@ -29,7 +29,7 @@ const CertificationIcon = ({
   return (
     <motion.div 
       className={cn(
-        "inline-flex items-center justify-center glass rounded-full p-1 shadow-lg", 
+        "inline-flex items-center justify-center rounded-full p-1",
         sizeClasses[size],
         className
       )}
@@ -48,7 +48,7 @@ const CertificationIcon = ({
       <img 
         src={imageSrc} 
         alt={alt} 
-        className="w-full h-full object-contain rounded-full"
+        className="w-full h-full object-contain"
       />
     </motion.div>
   );
