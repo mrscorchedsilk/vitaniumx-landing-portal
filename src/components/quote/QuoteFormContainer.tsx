@@ -1,4 +1,3 @@
-
 import React, { useState, FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
 import { QuoteFormInputs } from './QuoteFormInputs';
@@ -63,7 +62,6 @@ export const QuoteFormContainer = () => {
             alt="FSSAI Certification" 
             size="xl"
             delay={0.2}
-            glowColor="rgba(30, 174, 219, 0.5)"
           />
         </div>
         <div className="absolute -left-10 -bottom-10 opacity-20 pointer-events-none">
@@ -72,7 +70,6 @@ export const QuoteFormContainer = () => {
             alt="GMP Certification" 
             size="xl"
             delay={0.5}
-            glowColor="rgba(30, 174, 219, 0.5)"
           />
         </div>
         

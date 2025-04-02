@@ -9,6 +9,7 @@ interface FloatingCertificationLogoProps {
   className?: string;
   delay?: number;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  glowColor?: string; // Added glowColor prop
 }
 
 const FloatingCertificationLogo: React.FC<FloatingCertificationLogoProps> = ({
@@ -17,6 +18,7 @@ const FloatingCertificationLogo: React.FC<FloatingCertificationLogoProps> = ({
   className = '',
   delay = 0,
   size = 'md',
+  glowColor, // Add to component props
 }) => {
   const isMobile = useIsMobile();
   
