@@ -11,12 +11,16 @@ import ProductsSection from '@/components/ProductsSection';
 import CallToAction from '@/components/CallToAction';
 import CalendarSection from '@/components/CalendarSection';
 import Footer from '@/components/Footer';
+import FloatingButtons from '@/components/FloatingButtons';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-abstract">
       {/* Navbar */}
       <Navbar />
+      
+      {/* Floating Buttons */}
+      <FloatingButtons />
       
       {/* Add padding top to account for fixed navbar */}
       <div className="pt-20">
