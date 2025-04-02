@@ -9,7 +9,7 @@ interface FloatingCertificationLogoProps {
   alt: string;
   className?: string;
   delay?: number;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   glowColor?: string;
 }
 
@@ -25,6 +25,7 @@ const FloatingCertificationLogo: React.FC<FloatingCertificationLogoProps> = ({
   
   // Define size classes based on the size prop with bigger sizes for desktop
   const sizeClasses = {
+    xs: isMobile ? 'h-8 w-8' : 'h-12 w-12',
     sm: isMobile ? 'h-10 w-10' : 'h-16 w-16',
     md: isMobile ? 'h-14 w-14' : 'h-20 w-20',
     lg: isMobile ? 'h-16 w-16' : 'h-24 w-24',

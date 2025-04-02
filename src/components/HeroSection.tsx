@@ -75,48 +75,45 @@ const HeroSection = () => {
               </button>
             </div>
             
-            <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
+            {/* Updated certification logos layout - single row for mobile */}
+            <div className="flex flex-wrap justify-center md:justify-start mt-8">
               {isMobile ? (
-                <div className="flex flex-col items-center w-full">
-                  <div className="flex gap-4 justify-center mb-4">
-                    <FloatingCertificationLogo 
-                      src="/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
-                      alt="FSSC 22000 Certified" 
-                      size="sm"
-                      delay={0} 
-                      glowColor="rgba(30, 174, 219, 0.5)"
-                    />
-                    <FloatingCertificationLogo 
-                      src="/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
-                      alt="GMP Certified" 
-                      size="sm" 
-                      delay={0.5}
-                      glowColor="rgba(30, 174, 219, 0.5)"
-                    />
-                    <FloatingCertificationLogo 
-                      src="/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
-                      alt="FSSAI Certified" 
-                      size="sm" 
-                      delay={1}
-                      glowColor="rgba(30, 174, 219, 0.5)"
-                    />
-                  </div>
-                  <div className="flex gap-8 justify-center">
-                    <FloatingCertificationLogo 
-                      src="/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
-                      alt="ISO 9001:2015 Certified" 
-                      size="sm" 
-                      delay={1.5}
-                      glowColor="rgba(30, 174, 219, 0.5)"
-                    />
-                    <FloatingCertificationLogo 
-                      src="/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
-                      alt="ISO 22000:2018 Certified" 
-                      size="sm" 
-                      delay={2}
-                      glowColor="rgba(30, 174, 219, 0.5)"
-                    />
-                  </div>
+                <div className="flex gap-2 justify-center w-full">
+                  <FloatingCertificationLogo 
+                    src="/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
+                    alt="FSSC 22000 Certified" 
+                    size="xs"
+                    delay={0} 
+                    glowColor="rgba(30, 174, 219, 0.5)"
+                  />
+                  <FloatingCertificationLogo 
+                    src="/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
+                    alt="GMP Certified" 
+                    size="sm" 
+                    delay={0.5}
+                    glowColor="rgba(30, 174, 219, 0.5)"
+                  />
+                  <FloatingCertificationLogo 
+                    src="/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
+                    alt="FSSAI Certified" 
+                    size="sm" 
+                    delay={1}
+                    glowColor="rgba(30, 174, 219, 0.5)"
+                  />
+                  <FloatingCertificationLogo 
+                    src="/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
+                    alt="ISO 9001:2015 Certified" 
+                    size="sm" 
+                    delay={1.5}
+                    glowColor="rgba(30, 174, 219, 0.5)"
+                  />
+                  <FloatingCertificationLogo 
+                    src="/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
+                    alt="ISO 22000:2018 Certified" 
+                    size="sm" 
+                    delay={2}
+                    glowColor="rgba(30, 174, 219, 0.5)"
+                  />
                 </div>
               ) : (
                 <div className="flex gap-6 flex-wrap">

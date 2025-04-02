@@ -8,7 +8,7 @@ interface CertificationIconProps {
   alt: string;
   className?: string;
   delay?: number;
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'xs' | 'sm' | 'md' | 'lg';
 }
 
 const CertificationIcon = ({ 
@@ -20,6 +20,7 @@ const CertificationIcon = ({
 }: CertificationIconProps) => {
   // Define size classes based on the size prop - make sm smaller for mobile
   const sizeClasses = {
+    xs: "h-8 w-8",
     sm: "h-10 w-10",
     md: "h-16 w-16",
     lg: "h-20 w-20"
