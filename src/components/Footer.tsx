@@ -19,27 +19,31 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <MapPin className="h-5 w-5 text-vitablue-light" />
-                <span className="text-sm">
-                  F-80, Ramghat Rd, Sector 1, Talanagri, Aligarh, Uttar Pradesh 202001, India
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="h-5 w-5 text-vitablue-light" />
-                <a href="mailto:hello@vitaniumx.com" className="text-sm hover:text-vitablue-light">
-                  hello@vitaniumx.com
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="h-5 w-5 text-vitablue-light" />
-                <a href="tel:+919429694121" className="text-sm hover:text-vitablue-light">
-                  +91 9429694121
-                </a>
-              </div>
-            </div>
+            <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
+            <ul className="space-y-4">
+              <li className="flex">
+                <MapPin className="h-5 w-5 text-vitanium-400 mr-3 flex-shrink-0 mt-1" />
+                <div>
+                  <p className="text-white font-medium">Factory Unit 1:</p>
+                  <p className="text-neutral-300">F-80, Ramghat Rd, Sector 1, Talanagri, Talashpur, Aligarh, Uttar Pradesh 202001, India</p>
+                </div>
+              </li>
+              <li className="flex">
+                <MapPin className="h-5 w-5 text-vitanium-400 mr-3 flex-shrink-0 mt-1" />
+                <div>
+                  <p className="text-white font-medium">Corporate Office:</p>
+                  <p className="text-neutral-300">Innov8 Coworking Space, 3rd Floor, Orchid Centre, Gurugram, Haryana 122022, India</p>
+                </div>
+              </li>
+              <li className="flex items-center">
+                <Phone className="h-5 w-5 text-vitanium-400 mr-3 flex-shrink-0" />
+                <a href="tel:+919429694121" className="text-neutral-300 hover:text-white transition-colors">+91 94296 94121</a>
+              </li>
+              <li className="flex items-center">
+                <Mail className="h-5 w-5 text-vitanium-400 mr-3 flex-shrink-0" />
+                <a href="mailto:hello@vitaniumx.com" className="text-neutral-300 hover:text-white transition-colors">hello@vitaniumx.com</a>
+              </li>
+            </ul>
           </div>
 
           <div>
@@ -48,12 +52,14 @@ const Footer = () => {
               For sales queries and technical details, please contact:
             </p>
             <div className="space-y-2">
-              <a href="mailto:farhan.anis@vitaniumx.com" className="text-sm block hover:text-vitablue-light">
-                farhan.anis@vitaniumx.com
-              </a>
-              <a href="mailto:vageesh.shukla@vitaniumx.com" className="text-sm block hover:text-vitablue-light">
-                vageesh.shukla@vitaniumx.com
-              </a>
+              <li className="flex items-center">
+                <Phone className="h-5 w-5 text-vitanium-400 mr-3 flex-shrink-0" />
+                <a href="tel:+919429694121" className="text-neutral-300 hover:text-white transition-colors">+91 94296 94121</a>
+              </li>
+              <li className="flex items-center">
+                <Mail className="h-5 w-5 text-vitanium-400 mr-3 flex-shrink-0" />
+                <a href="mailto:hello@vitaniumx.com" className="text-neutral-300 hover:text-white transition-colors">hello@vitaniumx.com</a>
+              </li>
             </div>
           </div>
         </div>
