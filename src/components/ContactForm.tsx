@@ -15,28 +15,48 @@ const ContactForm = () => {
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // The webhook URL for n8n
+  const WEBHOOK_URL = 'https://n8n.rajatkhandelwal.com/webhook/7652828f-4410-4ada-96a5-4fb1e0e6fc15';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      toast.success('Thank you! We will contact you soon.');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        message: '',
+    try {
+      const response = await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
+      
+      if (response.ok) {
+        toast.success('Thank you! We will contact you soon.');
+        // Reset form after successful submission
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          message: '',
+        });
+      } else {
+        console.error('Webhook submission failed:', await response.text());
+        toast.error('Something went wrong. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error('Connection error. Please check your internet and try again.');
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
@@ -50,6 +70,7 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleChange}
           required
+          disabled={isSubmitting}
           className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none"
         />
       </div>
@@ -62,6 +83,7 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           required
+          disabled={isSubmitting}
           className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none"
         />
       </div>
@@ -73,6 +95,7 @@ const ContactForm = () => {
           value={formData.company}
           onChange={handleChange}
           required
+          disabled={isSubmitting}
           className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none"
         />
       </div>
@@ -84,6 +107,7 @@ const ContactForm = () => {
           value={formData.phone}
           onChange={handleChange}
           required
+          disabled={isSubmitting}
           className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none"
         />
       </div>
@@ -94,6 +118,7 @@ const ContactForm = () => {
           placeholder="Tell us about your requirements..."
           value={formData.message}
           onChange={handleChange}
+          disabled={isSubmitting}
           className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none resize-none h-24"
         />
       </div>
