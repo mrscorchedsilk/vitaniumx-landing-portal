@@ -69,77 +69,79 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="glass-form glass-card glow-vitablue hover-pop-sm rounded-xl space-y-4 animate-fade-in">
-      <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4 text-center md:text-left">Inquire About Micronutrient Premixes</h3>
-      
-      <div>
-        <Input
-          name="name"
-          placeholder="Your Name *"
-          value={formData.name}
-          onChange={handleChange}
-          required
-          disabled={isSubmitting}
-          className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none"
-        />
-      </div>
-      
-      <div>
-        <Input
-          name="email"
-          type="email"
-          placeholder="Your Email *"
-          value={formData.email}
-          onChange={handleChange}
-          required
-          disabled={isSubmitting}
-          className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none"
-        />
-      </div>
-      
-      <div>
-        <Input
-          name="company"
-          placeholder="Company Name *"
-          value={formData.company}
-          onChange={handleChange}
-          required
-          disabled={isSubmitting}
-          className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none"
-        />
-      </div>
-      
-      <div>
-        <Input
-          name="phone"
-          placeholder="Phone Number *"
-          value={formData.phone}
-          onChange={handleChange}
-          required
-          disabled={isSubmitting}
-          className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none"
-        />
-      </div>
-      
-      <div>
-        <Textarea
-          name="message"
-          placeholder="Tell us about your requirements..."
-          value={formData.message}
-          onChange={handleChange}
-          disabled={isSubmitting}
-          className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none resize-none h-24"
-        />
+    <form onSubmit={handleSubmit} className="glass-form glass-card glow-vitablue hover-pop-sm rounded-xl space-y-6 py-8 px-6 animate-fade-in h-full flex flex-col justify-between">
+      <div className="space-y-6">
+        <h3 className="text-xl md:text-2xl font-semibold mb-6 text-center md:text-left">Inquire About Micronutrient Premixes</h3>
+        
+        <div>
+          <Input
+            name="name"
+            placeholder="Your Name *"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            disabled={isSubmitting}
+            className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none h-12 text-base"
+          />
+        </div>
+        
+        <div>
+          <Input
+            name="email"
+            type="email"
+            placeholder="Your Email *"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            disabled={isSubmitting}
+            className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none h-12 text-base"
+          />
+        </div>
+        
+        <div>
+          <Input
+            name="company"
+            placeholder="Company Name *"
+            value={formData.company}
+            onChange={handleChange}
+            required
+            disabled={isSubmitting}
+            className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none h-12 text-base"
+          />
+        </div>
+        
+        <div>
+          <Input
+            name="phone"
+            placeholder="Phone Number *"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+            disabled={isSubmitting}
+            className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none h-12 text-base"
+          />
+        </div>
+        
+        <div>
+          <Textarea
+            name="message"
+            placeholder="Tell us about your requirements..."
+            value={formData.message}
+            onChange={handleChange}
+            disabled={isSubmitting}
+            className="bg-white/50 border-2 border-blue-200/50 focus:border-[#1EAEDB]/70 outline-none resize-none h-36 text-base"
+          />
+        </div>
       </div>
       
       <Button 
         type="submit" 
         disabled={isSubmitting}
-        className="w-full btn-primary"
+        className="w-full btn-primary h-14 text-base font-medium mt-6"
       >
         {isSubmitting ? 'Submitting...' : 'Discuss Your Requirements'}
       </Button>
-        </form>
+    </form>
   );
 };
 

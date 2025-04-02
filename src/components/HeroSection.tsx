@@ -18,8 +18,8 @@ const HeroSection = () => {
   };
   
   return (
-    <div id="contact" className="contact-form-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <div id="contact" className="contact-form-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -191,7 +191,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="order-2 lg:order-2"
+          className="order-2 lg:order-2 lg:min-h-[700px]"
         >
           <ContactForm />
         </motion.div>
