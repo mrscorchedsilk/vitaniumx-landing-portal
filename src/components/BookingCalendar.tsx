@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -51,17 +50,36 @@ const BookingCalendar: React.FC<BookingCalendarProps> = ({ className }) => {
     };
   }, [isMobile]);
 
+  useEffect(() => {
+    const adjustIframeHeight = () => {
+      if (iframeRef.current) {
+        iframeRef.current.style.height = iframeRef.current.contentWindow?.document.body.scrollHeight + 'px';
+      }
+    };
+
+    const iframe = iframeRef.current;
+    if (iframe) {
+      iframe.addEventListener('load', adjustIframeHeight);
+    }
+
+    return () => {
+      if (iframe) {
+        iframe.removeEventListener('load', adjustIframeHeight);
+      }
+    };
+  }, []);
+
   return (
-    <div className={`glass-card p-2 md:p-4 w-full glow-vitablue hover-pop-sm ${className}`}>
+    <div className={`w-full ${className}`}>
       <iframe 
         ref={iframeRef}
         src="https://api.leadconnectorhq.com/widget/booking/Dg6f95EVDvXwEgZ930Y4"
         style={{ 
           width: '100%', 
-          height: isMobile ? '520px' : '550px', 
+          height: isMobile ? '530px' : '560px', 
           border: 'none',
-          transform: 'none',
-          overflow: 'hidden'
+          transform: isMobile ? 'scale(0.95)' : 'none', 
+          transformOrigin: 'top center'
         }}
         id="Dg6f95EVDvXwEgZ930Y4_1743272468446"
         title="Schedule a call"

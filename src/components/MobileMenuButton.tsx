@@ -27,7 +27,7 @@ const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({ serviceItems, onSec
       <SheetContent side="bottom" className="pt-12 h-[70vh] rounded-t-3xl glass  ">
         <div className="flex flex-col space-y-4 p-4">
           <Link 
-            to="/micronutrient-lp/#" 
+            to="/micronutrient-lp/#home" 
             className="text-lg font-medium py-3 border-b border-white/20"
             onClick={() => {
               onSectionScroll('home');
@@ -42,7 +42,7 @@ const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({ serviceItems, onSec
               {serviceItems.map((item) => (
                 <Link 
                   key={item.id} 
-                  to={`/#${item.id}`} 
+                  to={`/micronutrient-lp/#${item.id}`} 
                   className="text-base"
                   onClick={() => onSectionScroll('products')}
                 >
@@ -53,7 +53,7 @@ const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({ serviceItems, onSec
           </div>
           
           <Link 
-            to="/#aboutus" 
+            to="/micronutrient-lp/#aboutus" 
             className="text-lg font-medium py-3 border-b border-white/20"
             onClick={() => onSectionScroll('aboutus')}
           >
@@ -61,7 +61,7 @@ const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({ serviceItems, onSec
           </Link>
           
           <Link 
-            to="/#contactus" 
+            to="/micronutrient-lp/#contactus" 
             className="text-lg font-medium py-3 border-b border-white/20"
             onClick={() => onSectionScroll('contactus')}
           >
