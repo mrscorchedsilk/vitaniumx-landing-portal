@@ -27,17 +27,7 @@ const CalendarSection = () => {
           </p>
         </motion.div>
         
-        <motion.div 
-          className={`glass-card max-w-5xl mx-auto ${isMobile ? 'px-2 py-2' : 'px-6 py-3 md:px-3 md:py-1'} glow-vitablue hover-pop-sm`}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          <div className="flex justify-center">
-            <BookingCalendar className="w-full" />
-          </div>
-        </motion.div>
+        <BookingCalendar className="w-full max-w-5xl mx-auto" />
       </div>
     </section>
   );

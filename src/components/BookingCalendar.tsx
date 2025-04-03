@@ -52,16 +52,16 @@ const BookingCalendar: React.FC<BookingCalendarProps> = ({ className }) => {
   }, [isMobile]);
 
   return (
-    <div className={`w-full ${className}`}>
+    <div className={`glass-card p-2 md:p-4 w-full glow-vitablue hover-pop-sm ${className}`}>
       <iframe 
         ref={iframeRef}
         src="https://api.leadconnectorhq.com/widget/booking/Dg6f95EVDvXwEgZ930Y4"
         style={{ 
           width: '100%', 
-          height: isMobile ? '530px' : '560px', 
+          height: isMobile ? '520px' : '550px', 
           border: 'none',
-          transform: isMobile ? 'scale(0.95)' : 'none', 
-          transformOrigin: 'top center'
+          transform: 'none',
+          overflow: 'hidden'
         }}
         id="Dg6f95EVDvXwEgZ930Y4_1743272468446"
         title="Schedule a call"

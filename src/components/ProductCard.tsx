@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 interface ProductCardProps {
   title: string;
@@ -21,6 +23,13 @@ const ProductCard = ({
   bgColor,
   className 
 }: ProductCardProps) => {
+  const scrollToContactForm = () => {
+    const contactForm = document.getElementById('hero');
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div 
       className={cn(
@@ -47,6 +56,13 @@ const ProductCard = ({
       
       <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2 text-white">{title}</h3>
       <p className="text-sm md:text-base text-white/90 mb-2 md:mb-4 flex-grow">{description}</p>
+      
+      <Button 
+        onClick={scrollToContactForm} 
+        className="mt-auto bg-white/20 hover:bg-white/30 text-white self-start flex items-center gap-2 glow-vitablue hover-pop-sm"
+      >
+        Know More <ArrowRight className="h-4 w-4" />
+      </Button>
     </div>
   );
 };
