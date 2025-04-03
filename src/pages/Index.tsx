@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import TrustedPartnersSection from '@/components/TrustedPartnersSection';
@@ -17,7 +16,14 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 const Index = () => {
   const isMobile = useIsMobile();
-  
+
+  useEffect(() => {
+    // Append the "#" to the URL when the component is loaded
+    if (!window.location.hash) {
+      window.history.replaceState(null, '', `${window.location.pathname}#`);
+    }
+  }, []);
+
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
@@ -33,18 +39,18 @@ const Index = () => {
     { title: 'Animal Nutrition', id: 'animalnutrition' },
     { title: 'FMCG Products', id: 'fmcgproducts' },
   ];
-  
+
   return (
     <div className="min-h-screen bg-abstract">
       {/* Navbar */}
       <Navbar />
-      
+
       {/* Floating Buttons */}
       <FloatingButtons />
-      
+
       {/* Mobile Menu Button - only displays in mobile view */}
       {isMobile && <MobileMenuButton serviceItems={serviceItems} onSectionScroll={scrollToSection} />}
-      
+
       {/* Add padding top to account for fixed navbar */}
       <div className="pt-20">
         {/* Hero Section with Side-by-side Form */}
@@ -62,10 +68,10 @@ const Index = () => {
 
         {/* Achievements Section */}
         <Achievements />
-        
+
         {/* Partnership Section */}
         <PartnershipSection />
-        
+
         {/* Second Partnership Section */}
         <PartnershipSection2 />
 
@@ -76,7 +82,7 @@ const Index = () => {
 
         {/* CTA Section */}
         <CallToAction />
-        
+
         {/* Calendar Section - New */}
         <section id="contactus" className="contact-form-section">
           <CalendarSection />
