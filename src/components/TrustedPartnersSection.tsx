@@ -7,43 +7,43 @@ import PartnersCarousel from '@/components/ui/PartnersCarousel';
 const TrustedPartnersSection = () => {
   const partnerLogos = [
     {
-      src: "/lovable-uploads/63e4b09f-2bc2-4a2e-8840-03deefba1190.png",
+      src: "/micronutrient-lp/public/lovable-uploads/63e4b09f-2bc2-4a2e-8840-03deefba1190.png",
       alt: "Chandigarh Sweets",
     },
     {
-      src: "/lovable-uploads/a3c56c11-5aff-467d-8c29-fc2a87cd65a6.png",
+      src: "/micronutrient-lp/public/lovable-uploads/a3c56c11-5aff-467d-8c29-fc2a87cd65a6.png",
       alt: "Devesh Foods",
     },
     {
-      src: "/lovable-uploads/b6cb18f6-c1a7-455c-9d82-4c7581adbaa0.png",
+      src: "/micronutrient-lp/public/lovable-uploads/b6cb18f6-c1a7-455c-9d82-4c7581adbaa0.png",
       alt: "interlink FOODS",
     },
     {
-      src: "/lovable-uploads/2aee1202-8de6-4710-b673-abd951ff6a94.png",
+      src: "/micronutrient-lp/public/lovable-uploads/2aee1202-8de6-4710-b673-abd951ff6a94.png",
       alt: "Continental Milkose",
     },
     {
-      src: "/lovable-uploads/3da5f323-2859-41c1-acce-249a7155a15d.png",
+      src: "/micronutrient-lp/public/lovable-uploads/3da5f323-2859-41c1-acce-249a7155a15d.png",
       alt: "SPR FOODS",
     },
     {
-      src: "/lovable-uploads/6dc644d7-b0fd-43ac-a2fb-d68874f84f31.png",
+      src: "/micronutrient-lp/public/lovable-uploads/6dc644d7-b0fd-43ac-a2fb-d68874f84f31.png",
       alt: "RAUSHEENA GROUP",
     },
     {
-      src: "/lovable-uploads/Shree Lal i Logo.png",
+      src: "/micronutrient-lp/public/lovable-uploads/Shree Lal i Logo.png",
       alt: "SHREE LALJI ENERGY FOODS PVT LTD",
     },
     {
-      src: "/lovable-uploads/25931309-7c87-40c2-9e72-6ceb29ffda3e.png",
+      src: "/micronutrient-lp/public/lovable-uploads/25931309-7c87-40c2-9e72-6ceb29ffda3e.png",
       alt: "SURUCHI FOODS",
     },
     {
-      src: "/lovable-uploads/48560100-0f0c-4d33-ae66-12a08fe864b9.png",
+      src: "/micronutrient-lp/public/lovable-uploads/48560100-0f0c-4d33-ae66-12a08fe864b9.png",
       alt: "M.P. AGRO",
     },
     {
-      src: "/lovable-uploads/haryana_gov_logo.png",
+      src: "/micronutrient-lp/public/lovable-uploads/haryana_gov_logo.png",
       alt: "Government of Haryana",
     }
   ];

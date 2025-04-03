@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -18,12 +17,13 @@ const App = () => {
       <Sonner />
       <BrowserRouter>
         <Routes>
+          {/* Main route */}
           <Route path="/micronutrient-lp/" element={<Index />} />
           <Route path="/success" element={<Success />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="/" element={<Navigate to="/micronutrient-lp/" replace />} />      
-          <Route path="*" element={<Index />} />
-          
+          {/* Redirect root to /micronutrient-lp/ */}
+          <Route path="/" element={<Navigate to="/micronutrient-lp/" replace />} />
+          {/* Catch-all route */}
+          <Route path="*" element={<Navigate to="/micronutrient-lp/" replace />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

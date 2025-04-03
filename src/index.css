@@ -65,7 +65,7 @@
   }
   body {
     @apply bg-background text-foreground antialiased;
-    background-image: url('/lovable-uploads/e4ba6480-d5b9-4225-95bc-36c764caf4d7.png');
+    background-image: url('/micronutrient-lp/public/lovable-uploads/e4ba6480-d5b9-4225-95bc-36c764caf4d7.png');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -137,7 +137,7 @@
   
   /* Updated marble background */
   .bg-marble {
-    background-image: url('/lovable-uploads/e4ba6480-d5b9-4225-95bc-36c764caf4d7.png');
+    background-image: url('/micronutrient-lp/public/lovable-uploads/e4ba6480-d5b9-4225-95bc-36c764caf4d7.png');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
