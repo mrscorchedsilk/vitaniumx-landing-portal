@@ -60,7 +60,7 @@ const Navbar = () => {
               <NavigationMenuList className="bg-transparent">
                 {/* Home */}
                 <NavigationMenuItem>
-                  <Link to="/micronutrient-lp/#" onClick={() => scrollToSection('hero')}>
+                  <Link to="/micronutrient-lp/#home" onClick={() => scrollToSection('home')}>
                     <div className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-white/20`}>Home</div>
                   </Link>
                 </NavigationMenuItem>
@@ -73,7 +73,7 @@ const Navbar = () => {
                       {serviceItems.map((item) => (
                         <Link 
                           key={item.id} 
-                          to={`/#${item.id}`} 
+                          to={`/micronutrient-lp/#${item.id}`} 
                           onClick={() => scrollToSection('products')}
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-white/20 hover:text-accent-foreground focus:bg-white/20 focus:text-accent-foreground"
                         >
@@ -86,14 +86,14 @@ const Navbar = () => {
                 
                 {/* About Us */}
                 <NavigationMenuItem>
-                  <Link to="/#aboutus" onClick={() => scrollToSection('whychooseus')}>
+                  <Link to="/micronutrient-lp/#aboutus" onClick={() => scrollToSection('aboutus')}>
                     <div className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-white/20`}>About Us</div>
                   </Link>
                 </NavigationMenuItem>
                 
                 {/* Contact Us */}
                 <NavigationMenuItem>
-                  <Link to="/#contactus" onClick={() => scrollToSection('calendar')}>
+                  <Link to="/micronutrient-lp/#contactus" onClick={() => scrollToSection('contactus')}>
                     <div className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-white/20`}>Contact Us</div>
                   </Link>
                 </NavigationMenuItem>

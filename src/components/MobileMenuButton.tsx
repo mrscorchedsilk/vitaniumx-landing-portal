@@ -30,7 +30,7 @@ const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({ serviceItems, onSec
             to="/micronutrient-lp/#" 
             className="text-lg font-medium py-3 border-b border-white/20"
             onClick={() => {
-              onSectionScroll('hero');
+              onSectionScroll('home');
             }}
           >
             Home
@@ -55,7 +55,7 @@ const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({ serviceItems, onSec
           <Link 
             to="/#aboutus" 
             className="text-lg font-medium py-3 border-b border-white/20"
-            onClick={() => onSectionScroll('whychooseus')}
+            onClick={() => onSectionScroll('aboutus')}
           >
             About Us
           </Link>
@@ -63,7 +63,7 @@ const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({ serviceItems, onSec
           <Link 
             to="/#contactus" 
             className="text-lg font-medium py-3 border-b border-white/20"
-            onClick={() => onSectionScroll('calendar')}
+            onClick={() => onSectionScroll('contactus')}
           >
             Contact Us
           </Link>

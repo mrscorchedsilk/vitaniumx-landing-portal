@@ -48,7 +48,7 @@ const Index = () => {
       {/* Add padding top to account for fixed navbar */}
       <div className="pt-20">
         {/* Hero Section with Side-by-side Form */}
-        <section id="hero">
+        <section id="home">
           <HeroSection />
         </section>
 
@@ -56,7 +56,7 @@ const Index = () => {
         <TrustedPartnersSection />
 
         {/* Why Choose Us Section */}
-        <section id="whychooseus">
+        <section id="aboutus">
           <WhyChooseUs />
         </section>
 
@@ -78,7 +78,7 @@ const Index = () => {
         <CallToAction />
         
         {/* Calendar Section - New */}
-        <section id="calendar" className="contact-form-section">
+        <section id="contactus" className="contact-form-section">
           <CalendarSection />
         </section>
 

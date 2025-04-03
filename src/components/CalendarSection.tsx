@@ -27,7 +27,7 @@ const CalendarSection = () => {
           </p>
         </motion.div>
         
-        <BookingCalendar className="w-full max-w-5xl mx-auto" />
+        <BookingCalendar/>
       </div>
     </section>
   );
