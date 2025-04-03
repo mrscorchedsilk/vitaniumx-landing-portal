@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import TrustedPartnersSection from '@/components/TrustedPartnersSection';
@@ -16,6 +17,13 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 const Index = () => {
   const isMobile = useIsMobile();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (window.location.hash === '#') {
+      navigate('/micronutrient-lp/', { replace: true });
+    }
+  }, [navigate]);
 
   useEffect(() => {
     // Append the "#" to the URL when the component is loaded
