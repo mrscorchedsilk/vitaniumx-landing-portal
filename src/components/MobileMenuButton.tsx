@@ -33,9 +33,9 @@ const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({ serviceItems, onSec
       </SheetTrigger>
       <SheetContent 
         side="bottom" 
-        className="pt-6 h-[80vh] rounded-t-3xl bg-white/95 backdrop-blur-xl border-t border-white/20 shadow-2xl"
+        className="pt-5 h-[80vh] rounded-t-3xl bg-white/95 backdrop-blur-xl border-t border-white/20 shadow-2xl"
       >
-        <div className="flex flex-col space-y-2 p-4">
+        <div className="flex flex-col space-y-2 p-0">
           <h2 className="text-xl font-bold text-gray-800 mb-4 text-center">Menu</h2>
           
           <Link 
