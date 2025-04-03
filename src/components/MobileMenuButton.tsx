@@ -18,10 +18,10 @@ const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({ serviceItems, onSec
     <Sheet>
       <SheetTrigger asChild>
         <Button 
-          className="fixed bottom-5 left-5 z-50 rounded-full w-14 h-14 p-0 flex items-center justify-center bg-green-500 hover:bg-green-600 shadow-lg"
+          className="fixed bottom-5 left-5 z-50 rounded-full w-14 h-14 p-0 flex items-center justify-center bg-white hover:bg-gray-100 shadow-lg"
           size="icon"
         >
-          <Menu className="h-6 w-6 text-white" />
+          <Menu className="h-6 w-6 text-green-500" />
         </Button>
       </SheetTrigger>
       <SheetContent side="bottom" className="pt-12 h-[70vh] rounded-t-3xl glass backdrop-blur-xl bg-white/30 border-white/20">
