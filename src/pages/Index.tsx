@@ -12,8 +12,28 @@ import CallToAction from '@/components/CallToAction';
 import CalendarSection from '@/components/CalendarSection';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
+import MobileMenuButton from '@/components/MobileMenuButton';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Index = () => {
+  const isMobile = useIsMobile();
+  
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const serviceItems = [
+    { title: 'Staple Food Fortification', id: 'staplefoodfortification' },
+    { title: 'Public Health Nutrition Scheme Fortification', id: 'governmentschemes' },
+    { title: 'Nutraceutical Applications', id: 'nutraceutical' },
+    { title: 'Customized Formulations', id: 'customformulations' },
+    { title: 'Animal Nutrition', id: 'animalnutrition' },
+    { title: 'FMCG Products', id: 'fmcgproducts' },
+  ];
+  
   return (
     <div className="min-h-screen bg-abstract">
       {/* Navbar */}
@@ -21,6 +41,9 @@ const Index = () => {
       
       {/* Floating Buttons */}
       <FloatingButtons />
+      
+      {/* Mobile Menu Button - only displays in mobile view */}
+      {isMobile && <MobileMenuButton serviceItems={serviceItems} onSectionScroll={scrollToSection} />}
       
       {/* Add padding top to account for fixed navbar */}
       <div className="pt-20">
