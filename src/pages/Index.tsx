@@ -19,18 +19,18 @@ const Index = () => {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (window.location.hash === '#') {
-      navigate('/micronutrient-lp/', { replace: true });
-    }
-  }, [navigate]);
+  // useEffect(() => {
+  //   if (window.location.hash === '#') {
+  //     navigate('/micronutrient-lp/', { replace: true });
+  //   }
+  // }, [navigate]);
 
-  useEffect(() => {
-    // Append the "#" to the URL when the component is loaded
-    if (!window.location.hash) {
-      window.history.replaceState(null, '', `${window.location.pathname}#`);
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Append the "#" to the URL when the component is loaded
+  //   if (!window.location.hash) {
+  //     window.history.replaceState(null, '', `${window.location.pathname}#`);
+  //   }
+  // }, []);
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
