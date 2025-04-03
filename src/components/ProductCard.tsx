@@ -24,7 +24,7 @@ const ProductCard = ({
   className 
 }: ProductCardProps) => {
   const scrollToContactForm = () => {
-    const contactForm = document.getElementById('hero');
+    const contactForm = document.getElementById('home');
     if (contactForm) {
       contactForm.scrollIntoView({ behavior: 'smooth' });
     }
