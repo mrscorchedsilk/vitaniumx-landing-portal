@@ -69,6 +69,8 @@ const TrustedPartnersSection = () => {
           <SectionHeading 
             title="Trusted Partners" 
             description="We're proud to collaborate with leading organizations across the food industry to enhance nutrition worldwide."
+            titleColor="black"
+            fontWeight="bold"
           />
         </motion.div>
         

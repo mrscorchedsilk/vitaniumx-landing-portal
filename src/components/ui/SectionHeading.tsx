@@ -7,6 +7,8 @@ interface SectionHeadingProps {
   description?: string;
   align?: 'left' | 'center' | 'right';
   titleSize?: 'sm' | 'md' | 'lg';
+  titleColor?: string;
+  fontWeight?: string;
 }
 
 const SectionHeading = ({ 
@@ -14,7 +16,9 @@ const SectionHeading = ({
   subtitle,
   description, 
   align = 'center',
-  titleSize = 'lg'
+  titleSize = 'lg',
+  titleColor,
+  fontWeight
 }: SectionHeadingProps) => {
   const alignClass = {
     left: 'text-left',
@@ -28,6 +32,8 @@ const SectionHeading = ({
     lg: 'text-4xl md:text-5xl'
   };
 
+  const fontWeightClass = fontWeight === 'bold' ? 'font-bold' : fontWeight === 'semibold' ? 'font-semibold' : 'font-bold';
+
   return (
     <div className={`mb-8 ${alignClass[align]}`}>
       {subtitle && (
@@ -35,8 +41,12 @@ const SectionHeading = ({
           {subtitle}
         </p>
       )}
-      <h2 className={`font-bold ${titleSizeClass[titleSize]}`}>
-        <span className="text-gradient">{title}</span>
+      <h2 className={`${fontWeightClass} ${titleSizeClass[titleSize]}`}>
+        {titleColor ? (
+          <span className={`text-${titleColor}`}>{title}</span>
+        ) : (
+          <span className="text-gradient">{title}</span>
+        )}
       </h2>
       {description && (
         <p className="mt-4 text-gray-600 max-w-3xl mx-auto">

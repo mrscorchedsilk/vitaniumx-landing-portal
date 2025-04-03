@@ -4,8 +4,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
+import { useNavigate } from 'react-router-dom';
 
 const ContactForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -56,6 +58,8 @@ const ContactForm = () => {
           phone: '',
           message: '',
         });
+        // Redirect to success page
+        navigate('/success');
       } else {
         console.error('Webhook submission failed:', await response.text());
         toast.error('Something went wrong. Please try again later.');
