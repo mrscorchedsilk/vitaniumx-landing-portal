@@ -40,7 +40,7 @@ const ProductsSection = () => {
             title="Staple Food Fortification"
             description="We manufacture premium wheat flour premixes, fortifying everyday staples with vital nutrients to improve health and nutrition."
             icon={<Wheat className="text-white h-6 w-6" />}
-            imageSrc="/micronutrient-lp/public/lovable-uploads/staple-food-premix-hero.png"
+            imageSrc="/micronutrient-lp/lovable-uploads/staple-food-premix-hero.png"
             delay={200}
             className="glow-vitablue hover-pop gradient-bg"
           />
@@ -48,7 +48,7 @@ const ProductsSection = () => {
             title="Public Health Nutrition Scheme Fortification"
             description="As a leading manufacturer, we provide high-quality FRK premixes to enhance rice with essential vitamins and minerals, helping to combat malnutrition."
             icon={<Heart className="text-white h-6 w-6" />}
-            imageSrc="/micronutrient-lp/public/lovable-uploads/government-program-solutions-hero.jpg"
+            imageSrc="/micronutrient-lp/lovable-uploads/government-program-solutions-hero.jpg"
             delay={400}
             className="glow-vitablue hover-pop gradient-bg"
           />
@@ -56,7 +56,7 @@ const ProductsSection = () => {
             title="Nutraceutical Applications"
             description="As manufacturers, we offer fortified rice kernels that enrich rice with critical nutrients, promoting healthier diets and communities."
             icon={<Shield className="text-white h-6 w-6" />}
-            imageSrc="/micronutrient-lp/public/lovable-uploads/therapeutic-nutrition-hero.jpg"
+            imageSrc="/micronutrient-lp/lovable-uploads/therapeutic-nutrition-hero.jpg"
             delay={600}
             className="glow-vitablue hover-pop gradient-bg"
           />
@@ -64,7 +64,7 @@ const ProductsSection = () => {
             title="Customized Formulations"
             description="Tailored blends for diverse industry applications based on your specific requirements."
             icon={<Globe className="text-white h-6 w-6" />}
-            imageSrc="/micronutrient-lp/public/lovable-uploads/micronutrient-premix-hero-section.jpg"
+            imageSrc="/micronutrient-lp/lovable-uploads/micronutrient-premix-hero-section.jpg"
             delay={800}
             className="glow-vitablue hover-pop gradient-bg"
           />
@@ -72,7 +72,7 @@ const ProductsSection = () => {
             title="Animal Nutrition"
             description="We produce fortified edible oils and milk, enhancing their nutritional content to improve public health and meet dietary needs."
             icon={<Leaf className="text-white h-6 w-6" />}
-            imageSrc="/micronutrient-lp/public/lovable-uploads/animal-nutrition-hero.webp"
+            imageSrc="/micronutrient-lp/lovable-uploads/animal-nutrition-hero.webp"
             delay={1000}
             className="glow-vitablue hover-pop gradient-bg"
           />
@@ -80,7 +80,7 @@ const ProductsSection = () => {
             title="FMCG Products"
             description="We specialize in manufacturing food fortified premixes that boost the nutritional value of various food products, ensuring better health for consumers."
             icon={<ShoppingCart className="text-white h-6 w-6" />}
-            imageSrc="/micronutrient-lp/public/lovable-uploads/fmcg-premix.jpg"
+            imageSrc="/micronutrient-lp/lovable-uploads/fmcg-premix.jpg"
             delay={1200}
             className="glow-vitablue hover-pop gradient-bg"
           />

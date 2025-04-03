@@ -119,7 +119,7 @@ const WhyChooseUs = () => {
               <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-vitablue/10 via-transparent to-green-400/10 animate-pulse"></div>
               
               <motion.img 
-                src="/micronutrient-lp/public/lovable-uploads/ca9cf586-b336-4748-8eba-133a808d968e.png" 
+                src="/micronutrient-lp/lovable-uploads/ca9cf586-b336-4748-8eba-133a808d968e.png" 
                 alt="Micronutrient Fortification Ingredients" 
                 className="rounded-lg w-full relative z-10"
                 whileHover={{ scale: 1.02 }}

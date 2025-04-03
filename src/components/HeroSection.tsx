@@ -119,31 +119,31 @@ const HeroSection = () => {
               {isMobile ? (
                 <div className="grid grid-cols-5 gap-2 w-full">
                   <FloatingCertificationLogo 
-                    src="/micronutrient-lp/public/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
+                    src="/micronutrient-lp/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
                     alt="GMP Certified" 
                     size="md" 
                     delay={0.5}
                   />
                   <FloatingCertificationLogo 
-                    src="/micronutrient-lp/public/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
+                    src="/micronutrient-lp/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
                     alt="FSSAI Certified" 
                     size="md" 
                     delay={1}
                   />
                   <FloatingCertificationLogo 
-                    src="/micronutrient-lp/public/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
+                    src="/micronutrient-lp/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
                     alt="ISO 9001:2015 Certified" 
                     size="md" 
                     delay={1.5}
                   />
                   <FloatingCertificationLogo 
-                    src="/micronutrient-lp/public/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
+                    src="/micronutrient-lp/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
                     alt="FSSC 22000 Certified" 
                     size="md"
                     delay={0} 
                   />
                   <FloatingCertificationLogo 
-                    src="/micronutrient-lp/public/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
+                    src="/micronutrient-lp/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
                     alt="ISO 22000:2018 Certified" 
                     size="md" 
                     delay={2}
@@ -152,31 +152,31 @@ const HeroSection = () => {
               ) : (
                 <div className="flex items-center justify-between gap-4 w-full">
                   <FloatingCertificationLogo 
-                    src="/micronutrient-lp/public/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
+                    src="/micronutrient-lp/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
                     alt="GMP Certified" 
                     size="lg" 
                     delay={0.5}
                   />
                   <FloatingCertificationLogo 
-                    src="/micronutrient-lp/public/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
+                    src="/micronutrient-lp/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
                     alt="FSSAI Certified" 
                     size="lg" 
                     delay={1}
                   />
                   <FloatingCertificationLogo 
-                    src="/micronutrient-lp/public/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
+                    src="/micronutrient-lp/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
                     alt="ISO 9001:2015 Certified" 
                     size="lg" 
                     delay={1.5}
                   />
                   <FloatingCertificationLogo 
-                    src="/micronutrient-lp/public/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
+                    src="/micronutrient-lp/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
                     alt="FSSC 22000 Certified" 
                     size="lg"
                     delay={0} 
                   />
                   <FloatingCertificationLogo 
-                    src="/micronutrient-lp/public/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
+                    src="/micronutrient-lp/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
                     alt="ISO 22000:2018 Certified" 
                     size="lg" 
                     delay={2}
