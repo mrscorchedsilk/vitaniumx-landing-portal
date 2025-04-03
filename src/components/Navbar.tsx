@@ -1,21 +1,46 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '@/components/Logo';
 import { Button } from '@/components/ui/button';
-import { Phone, Calendar } from 'lucide-react';
+import { Phone, Calendar, Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { 
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Navbar = () => {
   const isMobile = useIsMobile();
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      // Close the mobile menu if it's open
+      setIsOpen(false);
+    }
+  };
+
+  const serviceItems = [
+    { title: 'Staple Food Fortification', id: 'staplefoodfortification' },
+    { title: 'Public Health Nutrition Scheme Fortification', id: 'governmentschemes' },
+    { title: 'Nutraceutical Applications', id: 'nutraceutical' },
+    { title: 'Customized Formulations', id: 'customformulations' },
+    { title: 'Animal Nutrition', id: 'animalnutrition' },
+    { title: 'FMCG Products', id: 'fmcgproducts' },
+  ];
   
   const scrollToCalendarSection = () => {
-    const calendarSection = document.getElementById('calendar');
-    if (calendarSection) {
-      calendarSection.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      window.location.href = '/#calendar';
-    }
+    scrollToSection('calendar');
   };
   
   return (
@@ -23,8 +48,59 @@ const Navbar = () => {
       <div className="max-container flex items-center justify-between">
         {/* Logo on the left */}
         <div className="flex-shrink-0">
-          <Logo minimal={true} />
+          <Link to="/micronutrient-lp/#" onClick={() => scrollToSection('hero')}>
+            <Logo minimal={true} />
+          </Link>
         </div>
+        
+        {/* Desktop Navigation - Center */}
+        {!isMobile && (
+          <div className="flex-grow flex justify-center">
+            <NavigationMenu>
+              <NavigationMenuList>
+                {/* Home */}
+                <NavigationMenuItem>
+                  <Link to="/micronutrient-lp/#" onClick={() => scrollToSection('hero')}>
+                    <div className={navigationMenuTriggerStyle()}>Home</div>
+                  </Link>
+                </NavigationMenuItem>
+                
+                {/* Services Dropdown */}
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[400px] gap-3 p-4">
+                      {serviceItems.map((item) => (
+                        <Link 
+                          key={item.id} 
+                          to={`/#${item.id}`} 
+                          onClick={() => scrollToSection('products')}
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">{item.title}</div>
+                        </Link>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                
+                {/* About Us */}
+                <NavigationMenuItem>
+                  <Link to="/#aboutus" onClick={() => scrollToSection('whychooseus')}>
+                    <div className={navigationMenuTriggerStyle()}>About Us</div>
+                  </Link>
+                </NavigationMenuItem>
+                
+                {/* Contact Us */}
+                <NavigationMenuItem>
+                  <Link to="/#contactus" onClick={() => scrollToSection('calendar')}>
+                    <div className={navigationMenuTriggerStyle()}>Contact Us</div>
+                  </Link>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
+        )}
         
         {/* Buttons on the right */}
         <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
@@ -59,6 +135,65 @@ const Navbar = () => {
           </Button>
         </div>
       </div>
+      
+      {/* Mobile Menu - Hamburger Button (Fixed at bottom right) */}
+      {isMobile && (
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button 
+              className="fixed bottom-5 right-5 z-50 rounded-full w-14 h-14 p-0 flex items-center justify-center bg-green-500 hover:bg-green-600 shadow-lg"
+              size="icon"
+            >
+              <Menu className="h-6 w-6" />
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="bottom" className="pt-12 h-[70vh] rounded-t-3xl">
+            <div className="flex flex-col space-y-4 p-4">
+              <Link 
+                to="/micronutrient-lp/#" 
+                className="text-lg font-medium py-3 border-b"
+                onClick={() => {
+                  scrollToSection('hero');
+                }}
+              >
+                Home
+              </Link>
+              
+              <div>
+                <h3 className="text-lg font-medium mb-2">Services</h3>
+                <div className="pl-4 flex flex-col space-y-3">
+                  {serviceItems.map((item) => (
+                    <Link 
+                      key={item.id} 
+                      to={`/#${item.id}`} 
+                      className="text-base"
+                      onClick={() => scrollToSection('products')}
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              
+              <Link 
+                to="/#aboutus" 
+                className="text-lg font-medium py-3 border-b"
+                onClick={() => scrollToSection('whychooseus')}
+              >
+                About Us
+              </Link>
+              
+              <Link 
+                to="/#contactus" 
+                className="text-lg font-medium py-3 border-b"
+                onClick={() => scrollToSection('calendar')}
+              >
+                Contact Us
+              </Link>
+            </div>
+          </SheetContent>
+        </Sheet>
+      )}
     </header>
   );
 };
