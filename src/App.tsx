@@ -18,12 +18,10 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           {/* Main route */}
-          <Route path="/micronutrient-lp/" element={<Index />} />
+          <Route path="/" element={<Index />} />
           <Route path="/success" element={<Success />} />
-          {/* Redirect root to /micronutrient-lp/ */}
-          <Route path="/" element={<Navigate to="/micronutrient-lp/" replace />} />
           {/* Catch-all route */}
-          <Route path="*" element={<Navigate to="/micronutrient-lp/" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
