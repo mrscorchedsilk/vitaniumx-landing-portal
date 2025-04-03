@@ -57,25 +57,25 @@ const Navbar = () => {
         {!isMobile && (
           <div className="flex-grow flex justify-center">
             <NavigationMenu>
-              <NavigationMenuList>
+              <NavigationMenuList className="bg-transparent">
                 {/* Home */}
                 <NavigationMenuItem>
                   <Link to="/micronutrient-lp/#" onClick={() => scrollToSection('hero')}>
-                    <div className={navigationMenuTriggerStyle()}>Home</div>
+                    <div className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-white/20`}>Home</div>
                   </Link>
                 </NavigationMenuItem>
                 
                 {/* Services Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="bg-transparent hover:bg-white/20">Services</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[400px] gap-3 p-4">
+                    <div className="grid w-[400px] gap-3 p-4 glass">
                       {serviceItems.map((item) => (
                         <Link 
                           key={item.id} 
                           to={`/#${item.id}`} 
                           onClick={() => scrollToSection('products')}
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-white/20 hover:text-accent-foreground focus:bg-white/20 focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">{item.title}</div>
                         </Link>
@@ -87,14 +87,14 @@ const Navbar = () => {
                 {/* About Us */}
                 <NavigationMenuItem>
                   <Link to="/#aboutus" onClick={() => scrollToSection('whychooseus')}>
-                    <div className={navigationMenuTriggerStyle()}>About Us</div>
+                    <div className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-white/20`}>About Us</div>
                   </Link>
                 </NavigationMenuItem>
                 
                 {/* Contact Us */}
                 <NavigationMenuItem>
                   <Link to="/#contactus" onClick={() => scrollToSection('calendar')}>
-                    <div className={navigationMenuTriggerStyle()}>Contact Us</div>
+                    <div className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-white/20`}>Contact Us</div>
                   </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>
@@ -136,22 +136,22 @@ const Navbar = () => {
         </div>
       </div>
       
-      {/* Mobile Menu - Hamburger Button (Fixed at bottom right) */}
+      {/* Mobile Menu - Hamburger Button (Fixed at bottom left) */}
       {isMobile && (
         <Sheet>
           <SheetTrigger asChild>
             <Button 
-              className="fixed bottom-5 right-5 z-50 rounded-full w-14 h-14 p-0 flex items-center justify-center bg-green-500 hover:bg-green-600 shadow-lg"
+              className="fixed bottom-5 left-5 z-50 rounded-full w-14 h-14 p-0 flex items-center justify-center bg-green-500 hover:bg-green-600 shadow-lg"
               size="icon"
             >
-              <Menu className="h-6 w-6" />
+              <Menu className="h-6 w-6 text-white" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="bottom" className="pt-12 h-[70vh] rounded-t-3xl">
+          <SheetContent side="bottom" className="pt-12 h-[70vh] rounded-t-3xl glass backdrop-blur-xl bg-white/30 border-white/20">
             <div className="flex flex-col space-y-4 p-4">
               <Link 
                 to="/micronutrient-lp/#" 
-                className="text-lg font-medium py-3 border-b"
+                className="text-lg font-medium py-3 border-b border-white/20"
                 onClick={() => {
                   scrollToSection('hero');
                 }}
@@ -177,7 +177,7 @@ const Navbar = () => {
               
               <Link 
                 to="/#aboutus" 
-                className="text-lg font-medium py-3 border-b"
+                className="text-lg font-medium py-3 border-b border-white/20"
                 onClick={() => scrollToSection('whychooseus')}
               >
                 About Us
@@ -185,7 +185,7 @@ const Navbar = () => {
               
               <Link 
                 to="/#contactus" 
-                className="text-lg font-medium py-3 border-b"
+                className="text-lg font-medium py-3 border-b border-white/20"
                 onClick={() => scrollToSection('calendar')}
               >
                 Contact Us
