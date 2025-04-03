@@ -38,14 +38,14 @@ const PartnershipSection2 = () => {
               viewport={{ once: true }}
             >
               <motion.img 
-                src="/micronutrient-lp/lovable-uploads/7fc3bae2-9485-4fc2-b7e0-91e18ba73ae6.png" 
+                src="/lovable-uploads/7fc3bae2-9485-4fc2-b7e0-91e18ba73ae6.png" 
                 alt="Yellow circular background" 
                 className="w-full"
                 animate={{ rotate: [0, 2, 0, -2, 0] }}
                 transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
               />
               <motion.img 
-                src="/micronutrient-lp/lovable-uploads/1ffcb39f-a4a2-4462-a4aa-7fda40c425b6.png" 
+                src="/lovable-uploads/1ffcb39f-a4a2-4462-a4aa-7fda40c425b6.png" 
                 alt="Fortification ingredients" 
                 className="absolute inset-0 w-3/4 h-3/4 m-auto object-cover rounded-full"
                 animate={{ y: [0, -8, 0] }}

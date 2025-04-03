@@ -84,31 +84,31 @@ const Hero = () => {
           {/* Mobile View - Larger icons in a single row with more spacing */}
           <div className="flex justify-between gap-1 md:hidden">
             <CertificationIcon 
-              imageSrc="/micronutrient-lp/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
+              imageSrc="/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
               alt="GMP Certification"
               size="sm" 
               className="bg-transparent border-0 shadow-none"
             />
             <CertificationIcon 
-              imageSrc="/micronutrient-lp/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
+              imageSrc="/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
               alt="FSSAI Certification"
               size="sm"
               className="bg-transparent border-0 shadow-none"
             />
             <CertificationIcon 
-              imageSrc="/micronutrient-lp/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
+              imageSrc="/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
               alt="ISO 9001:2015 Certification"
               size="sm"
               className="bg-transparent border-0 shadow-none"
             />
             <CertificationIcon 
-              imageSrc="/micronutrient-lp/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
+              imageSrc="/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
               alt="FSSC 22000 Certification"
               size="sm"
               className="bg-transparent border-0 shadow-none"
             />
             <CertificationIcon 
-              imageSrc="/micronutrient-lp/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
+              imageSrc="/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
               alt="ISO 22000:2018 Certification"
               size="sm"
               className="bg-transparent border-0 shadow-none"
@@ -119,19 +119,19 @@ const Hero = () => {
           <div className="hidden md:block">
             <div className="flex justify-center gap-8 mb-4">
               <CertificationIcon 
-                imageSrc="/micronutrient-lp/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
+                imageSrc="/lovable-uploads/a4fce7de-1569-41b2-a92b-229feae147c3.png" 
                 alt="GMP Certification"
                 size="md" 
                 className="bg-transparent border-0 shadow-none"
               />
               <CertificationIcon 
-                imageSrc="/micronutrient-lp/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
+                imageSrc="/lovable-uploads/f11fa1ed-549c-493c-8243-ec81e8b16c27.png" 
                 alt="FSSAI Certification"
                 size="lg"
                 className="bg-transparent border-0 shadow-none"
               />
               <CertificationIcon 
-                imageSrc="/micronutrient-lp/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
+                imageSrc="/lovable-uploads/33f2f1bb-eecb-421d-a59f-1b3e2cef2ccf.png" 
                 alt="ISO 9001:2015 Certification"
                 size="lg"
                 className="bg-transparent border-0 shadow-none"
@@ -140,13 +140,13 @@ const Hero = () => {
             
             <div className="flex justify-center gap-8">
               <CertificationIcon 
-                imageSrc="/micronutrient-lp/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
+                imageSrc="/lovable-uploads/f7a0e029-ae4e-48b0-85f9-d7b250426db9.png" 
                 alt="FSSC 22000 Certification"
                 size="md"
                 className="bg-transparent border-0 shadow-none"
               />
               <CertificationIcon 
-                imageSrc="/micronutrient-lp/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
+                imageSrc="/lovable-uploads/33c379f0-2f28-4d91-855a-db914fb96c38.png" 
                 alt="ISO 22000:2018 Certification"
                 size="lg"
                 className="bg-transparent border-0 shadow-none"

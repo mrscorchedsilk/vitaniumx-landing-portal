@@ -59,7 +59,7 @@ export const QuoteFormContainer = () => {
         {/* Floating Certification Logos */}
         <div className="absolute -right-10 -top-10 opacity-20 pointer-events-none">
           <FloatingCertificationLogo 
-            src="/micronutrient-lp/lovable-uploads/fssai.webp" 
+            src="/lovable-uploads/fssai.webp" 
             alt="FSSAI Certification" 
             size="xl"
             delay={0.2}
@@ -67,7 +67,7 @@ export const QuoteFormContainer = () => {
         </div>
         <div className="absolute -left-10 -bottom-10 opacity-20 pointer-events-none">
           <FloatingCertificationLogo 
-            src="/micronutrient-lp/lovable-uploads/gmp.png" 
+            src="/lovable-uploads/gmp.png" 
             alt="GMP Certification" 
             size="xl"
             delay={0.5}
