@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/micronutrient-lp/" element={<Index />} />
           <Route path="/success" element={<Success />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="/" element={<Navigate to="/micronutrient-lp/" replace />} />      
+          {/* <Route path="/" element={<Navigate to="/micronutrient-lp/" replace />} />       */}
           <Route path="*" element={<Index />} />
           
         </Routes>
